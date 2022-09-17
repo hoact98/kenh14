@@ -29,6 +29,7 @@
 .toolbar-search-wrapper form {
     display: flex;
     height: 25px;
+    position: relative;
 }
 
 .toolbar-search-wrapper form input {
@@ -39,6 +40,7 @@
     font-size: 11px;
     color: rgb(141, 141, 141);
     background-color: #111;
+    width: 154px;
 }
 
 .toolbar-search-wrapper form button {
@@ -46,6 +48,14 @@
     border: 0;
     color: white;
     height: 25px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+input:focus-visible {
+    outline-offset: 0px;
+    outline: 0;
 }
 
 
@@ -101,5 +111,8 @@
 .menu-list li a {
     text-decoration: none;
     color: #fff;
-    padding: 0 7px;
+    padding: 0 6px;
+    line-height: 40px;
+    font-weight: 600;
+    font-size: 14px;
 }

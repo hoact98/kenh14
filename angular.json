@@ -27,7 +27,7 @@
                             "src/assets"
                         ],
                         "styles": [
-                            "src/styles/icons/fontawesome/styles.min.css",
+                            "./src/styles/icons/fontawesome/styles.min.css",
                             "./node_modules/bootstrap/dist/css/bootstrap.min.css",
                             "src/styles.css"
                         ],
