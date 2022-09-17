@@ -1,0 +1,40 @@
+.home-star-item {
+    padding: 25px 0;
+    border-bottom: 1px solid #ebebeb;
+    .home-star-right {
+        .home-star-title a {
+            font-size: 20px;
+            line-height: 26px;
+            color: #333;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+            margin-top: -5px;
+            font-weight: 700;
+        }
+        .home-star-meta {
+            .home-star-category {
+                font-size: 14px;
+                color: #41455e;
+                text-decoration: none;
+                font-weight: 700;
+            }
+            .home-star-time {
+                font-size: 14px;
+                color: #777;
+            }
+        }
+        .home-star-trim {
+            font-size: 13px;
+            font-family: Arial;
+            color: #4d4d4d;
+            line-height: 18px;
+            display: block;
+        }
+        .home-star-readmore {
+            padding-top: 12px;
+            margin-top: 15px;
+            border-top: 1px dotted #d6d6d6;
+        }
+    }
+}

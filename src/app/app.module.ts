@@ -9,6 +9,9 @@ import { SiteHeaderComponent } from './components/_layout/site-header/site-heade
 import { SiteLayoutHomeComponent } from './components/_layout/site-layout-home/site-layout-home.component';
 import { Kenh14Component } from './modules/home/components/kenh14/kenh14.component';
 import { SiteSidebarComponent } from './components/_layout/site-sidebar/site-sidebar.component';
+import { NewStreamComponent } from './modules/home/components/new-stream/new-stream.component';
+import { FeaturedComponent } from './modules/home/components/featured/featured.component';
+import { CategoryNewComponent } from './modules/home/components/category-new/category-new.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { SiteSidebarComponent } from './components/_layout/site-sidebar/site-sid
     SiteHeaderComponent,
     SiteLayoutHomeComponent,
     Kenh14Component,
-    SiteSidebarComponent
+    SiteSidebarComponent,
+    NewStreamComponent,
+    FeaturedComponent,
+    CategoryNewComponent
   ],
   imports: [
     BrowserModule,
