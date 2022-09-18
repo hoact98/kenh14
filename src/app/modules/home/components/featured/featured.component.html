@@ -25,31 +25,95 @@
         </div>
     </div>
     <div class="slide-wrapper">
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="..." class="d-block w-100" alt="...">
+        <swiper [slidesPerView]="3" [spaceBetween]="30" [keyboard]="{
+      enabled: true
+    }" [pagination]="{
+      clickable: true
+    }" [navigation]="true" class="mySwiper">
+            <ng-template swiperSlide>
+                <div class="slide-item">
+                    <a href="" title="BLACKPINK trở lại: Nâng tầm phong cách, cân bằng nét Mỹ - Hàn" type="0" class="slide-item-thumb">
+                        <img src="https://kenh14cdn.com/zoom/280_175/203336854389633024/2022/9/18/photo1663484036817-16634840370471234996255.jpg" alt="BLACKPINK trở lại: Nâng tầm phong cách, cân bằng nét Mỹ - Hàn">
+                    </a>
+                    <h4 class="slide-item-title">
+                        <a href="" title="BLACKPINK trở lại: Nâng tầm phong cách, cân bằng nét Mỹ - Hàn">
+                            BLACKPINK trở lại: Nâng tầm phong cách, cân bằng nét Mỹ - Hàn
+                        </a>
+                    </h4>
                 </div>
-                <div class="carousel-item">
-                    <img src="..." class="d-block w-100" alt="...">
+            </ng-template>
+            <ng-template swiperSlide>
+                <div class="slide-item">
+                    <a href="" title="Khánh Thi: 13 năm chưa đăng ký kết hôn nên giờ vợ chồng tôi như mới yêu và mới cưới" type="0" class="slide-item-thumb">
+                        <img src="https://kenh14cdn.com/zoom/280_175/203336854389633024/2022/9/18/photo1663489337402-16634893375871761877278.png" alt="Khánh Thi: 13 năm chưa đăng ký kết hôn nên giờ vợ chồng tôi như mới yêu và mới cưới">
+                    </a>
+                    <h4 class="slide-item-title">
+                        <a href="" title="Khánh Thi: 13 năm chưa đăng ký kết hôn nên giờ vợ chồng tôi như mới yêu và mới cưới">
+                            Khánh Thi: 13 năm chưa đăng ký kết hôn nên giờ vợ chồng tôi như mới yêu và mới cưới
+                        </a>
+                    </h4>
                 </div>
-                <div class="carousel-item">
-                    <img src="..." class="d-block w-100" alt="...">
+            </ng-template>
+            <ng-template swiperSlide>
+                <div class="slide-item">
+                    <a href="" title="Vụ 60 người Việt tháo chạy khỏi Campuchia: Yêu cầu giao thêm 11 người" type="0" class="slide-item-thumb">
+                        <img src="https://kenh14cdn.com/zoom/280_175/203336854389633024/2022/9/18/photo1663478715230-1663478715366681255226.jpeg" alt="Vụ 60 người Việt tháo chạy khỏi Campuchia: Yêu cầu giao thêm 11 người">
+                    </a>
+                    <h4 class="slide-item-title">
+                        <a href="" title="Vụ 60 người Việt tháo chạy khỏi Campuchia: Yêu cầu giao thêm 11 người">
+                            Vụ 60 người Việt tháo chạy khỏi Campuchia: Yêu cầu giao thêm 11 người
+                        </a>
+                    </h4>
                 </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
+            </ng-template>
+            <ng-template swiperSlide>
+                <div class="slide-item">
+                    <a href="" title="Khánh Thi: 13 năm chưa đăng ký kết hôn nên giờ vợ chồng tôi như mới yêu và mới cưới" type="0" class="slide-item-thumb">
+                        <img src="https://kenh14cdn.com/zoom/280_175/203336854389633024/2022/9/18/photo1663489337402-16634893375871761877278.png" alt="Khánh Thi: 13 năm chưa đăng ký kết hôn nên giờ vợ chồng tôi như mới yêu và mới cưới">
+                    </a>
+                    <h4 class="slide-item-title">
+                        <a href="" title="Khánh Thi: 13 năm chưa đăng ký kết hôn nên giờ vợ chồng tôi như mới yêu và mới cưới">
+                            Khánh Thi: 13 năm chưa đăng ký kết hôn nên giờ vợ chồng tôi như mới yêu và mới cưới
+                        </a>
+                    </h4>
+                </div>
+            </ng-template>
+            <ng-template swiperSlide>
+                <div class="slide-item">
+                    <a href="" title="BLACKPINK trở lại: Nâng tầm phong cách, cân bằng nét Mỹ - Hàn" type="0" class="slide-item-thumb">
+                        <img src="https://kenh14cdn.com/zoom/280_175/203336854389633024/2022/9/18/photo1663484036817-16634840370471234996255.jpg" alt="BLACKPINK trở lại: Nâng tầm phong cách, cân bằng nét Mỹ - Hàn">
+                    </a>
+                    <h4 class="slide-item-title">
+                        <a href="" title="BLACKPINK trở lại: Nâng tầm phong cách, cân bằng nét Mỹ - Hàn">
+                            BLACKPINK trở lại: Nâng tầm phong cách, cân bằng nét Mỹ - Hàn
+                        </a>
+                    </h4>
+                </div>
+            </ng-template>
+            <ng-template swiperSlide>
+                <div class="slide-item">
+                    <a href="" title="Khánh Thi: 13 năm chưa đăng ký kết hôn nên giờ vợ chồng tôi như mới yêu và mới cưới" type="0" class="slide-item-thumb">
+                        <img src="https://kenh14cdn.com/zoom/280_175/203336854389633024/2022/9/18/photo1663489337402-16634893375871761877278.png" alt="Khánh Thi: 13 năm chưa đăng ký kết hôn nên giờ vợ chồng tôi như mới yêu và mới cưới">
+                    </a>
+                    <h4 class="slide-item-title">
+                        <a href="" title="Khánh Thi: 13 năm chưa đăng ký kết hôn nên giờ vợ chồng tôi như mới yêu và mới cưới">
+                            Khánh Thi: 13 năm chưa đăng ký kết hôn nên giờ vợ chồng tôi như mới yêu và mới cưới
+                        </a>
+                    </h4>
+                </div>
+            </ng-template>
+            <ng-template swiperSlide>
+                <div class="slide-item">
+                    <a href="" title="Vụ 60 người Việt tháo chạy khỏi Campuchia: Yêu cầu giao thêm 11 người" type="0" class="slide-item-thumb">
+                        <img src="https://kenh14cdn.com/zoom/280_175/203336854389633024/2022/9/18/photo1663478715230-1663478715366681255226.jpeg" alt="Vụ 60 người Việt tháo chạy khỏi Campuchia: Yêu cầu giao thêm 11 người">
+                    </a>
+                    <h4 class="slide-item-title">
+                        <a href="" title="Vụ 60 người Việt tháo chạy khỏi Campuchia: Yêu cầu giao thêm 11 người">
+                            Vụ 60 người Việt tháo chạy khỏi Campuchia: Yêu cầu giao thêm 11 người
+                        </a>
+                    </h4>
+                </div>
+            </ng-template>
+        </swiper>
     </div>
 </div>

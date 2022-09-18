@@ -11,36 +11,40 @@
             <div class="toolbar-search-wrapper">
                 <form action="">
                     <input type="search" placeholder="Tìm kiếm...">
-                    <button type="submit"><i class="fas fa-search"></i></button>
+                    <button type="submit"><svg width="12" height="12" viewBox="0 0 12 12">
+                        <path d="M12.000,10.909 C12.000,11.999 10.909,11.999 10.909,11.999 L7.788,8.879 C6.979,9.467 5.986,9.818 4.909,9.818 C2.198,9.818 -0.000,7.620 -0.000,4.909 C-0.000,2.197 2.198,-0.000 4.909,-0.000 C7.620,-0.000 9.818,2.197 9.818,4.909 C9.818,5.986 9.467,6.978 8.879,7.788 L12.000,10.909 ZM4.909,1.091 C2.800,1.091 1.091,2.800 1.091,4.909 C1.091,7.017 2.800,8.727 4.909,8.727 C7.017,8.727 8.727,7.017 8.727,4.909 C8.727,2.800 7.017,1.091 4.909,1.091 Z" fill="#fff"></path>
+                    </svg></button>
                 </form>
             </div>
         </div>
     </div>
     <div class="header-wrapper">
         <div class="top-header">
-            <div class="wrapper d-flex align-items-center">
-                <div class="logo">
-                    <a href="">
-                        <img src="../../../../assets/images/k14_logo2022.svg" alt="">
-                    </a>
-                </div>
-                <div class="trending-wrapper">
-                    <ul class="trending-list d-flex m-0">
-                        <li class="trending-item">
-                            <a href="">#Lý Dịch Phong bị phong sát</a>
-                        </li>
-                        <li class="trending-item">
-                            <a href="">#Nữ hoàng Anh Elizabeth II qua đời</a>
-                        </li>
-                    </ul>
+            <div class="wrapper">
+                <div class="d-flex align-items-center">
+                    <div class="logo">
+                        <a href="">
+                            <img src="../../../../assets/images/k14_logo2022.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="trending-wrapper">
+                        <ul class="trending-list d-flex m-0">
+                            <li class="trending-item">
+                                <a href="">#Lý Dịch Phong bị phong sát</a>
+                            </li>
+                            <li class="trending-item">
+                                <a href="">#Nữ hoàng Anh Elizabeth II qua đời</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="bottom-header">
+        <div class="bottom-header" [class.fixed]="navFixed">
             <div class="wrapper">
-                <ul class="menu-list d-flex m-0">
+                <ul class="menu-list d-flex m-0 justify-content-between">
                     <li class="menu-item home">
-                        <a href=""></a>
+                        <a href="">Home</a>
                     </li>
                     <li class="menu-item">
                         <a href="">Star</a>
@@ -84,28 +88,278 @@
                     <li class="menu-item">
                         <a href="">Video</a>
                     </li>
-                    <li class="menu-item">
-                        <a href=""></a>
-                        <div class="menu-expan-wrapper d-none">
-                            <ul class="sub-menu">
-                                <li class="sub-menu-item">
-                                    <h4 class="sub-menu-name"></h4>
-                                    <ul class="list-sub-menus">
-                                        <li>
-                                            <a href=""></a>
+                    <li class="menu-item expand-icon">
+                        <a href="javascript:void(0);" class="icon">
+                            <span class="expand-icon-item icon-line1"></span>
+                            <span class="expand-icon-item icon-line2"></span>
+                            <span class="expand-icon-item icon-line3"></span>
+                        </a>
+                        <div class="menu-expand-wrapper" style="width: 1519px;">
+                            <div class="wrapper">
+                                <ul class="list-other-cate d-flex flex-wrap">
+                                    <li class="menu-expand-item" style="height: 147px;">
+                                        <h4 class="expand-item-name">
+                                            <a href="" title="Đời sống">Đời sống</a>
+                                        </h4>
+                                        <ul class="expand-sub-list">
+                                            <li class="expand-sub-item">
+                                                <a href="" title="Nhân Vật">Nhân Vật</a>
+                                            </li>
+                                            <li class="expand-sub-item">
+                                                <a href="" title="Xem-Ăn-Chơi">Xem-Ăn-Chơi</a>
+                                            </li>
+
+                                            <li class="expand-sub-item">
+                                                <a href="" title="Trạm yêu">Trạm yêu</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-expand-item" style="height: 147px;">
+                                        <h4 class="expand-item-name">
+                                            <a href="" title="Xem Mua Luôn">Xem Mua Luôn</a>
+                                        </h4>
+                                        <ul class="expand-sub-list">
+                                            <li class="expand-sub-item">
+                                                <a href="" title="Thời trang">Thời trang</a>
+                                            </li>
+                                            <li class="expand-sub-item">
+                                                <a href="" title="Đẹp">Đẹp</a>
+                                            </li>
+                                            <li class="expand-sub-item">
+                                                <a href="" title="Home &amp; Decor">Home &amp; Decor</a>
+                                            </li>
+                                            <li class="expand-sub-item">
+                                                <a href="" title="Shopping Guide">Shopping Guide</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-expand-item" style="height: 147px;">
+                                        <h4 class="expand-item-name">
+                                            <a href="" title="Sport">Sport</a>
+                                        </h4>
+                                        <ul class="expand-sub-list">
+                                            <li class="expand-sub-item">
+                                                <a href="" title="Bóng Đá">Bóng Đá</a>
+                                            </li>
+                                            <li class="expand-sub-item">
+                                                <a href="" title="Hậu Trường">Hậu Trường</a>
+                                            </li>
+                                            <li class="expand-sub-item">
+                                                <a href="" title="Thể Thao Khác">Thể Thao Khác</a>
+                                            </li>
+                                            <li class="expand-sub-item">
+                                                <a href="" title="Video">Video</a>
+                                            </li>
+                                            <li class="expand-sub-item">
+                                                <a href="" title="Ngoại hạng Anh">Ngoại hạng Anh</a>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+                                    <li class="menu-expand-item" style="height: 147px;">
+                                        <h4 class="expand-item-name">
+                                            <a href="" title="Musik">Musik</a>
+                                        </h4>
+                                        <ul class="expand-sub-list">
+                                            <li class="expand-sub-item">
+                                                <a href="" title="Âu-Mỹ">Âu-Mỹ</a>
+                                            </li>
+                                            <li class="expand-sub-item">
+                                                <a href="" title="Châu Á">Châu Á</a>
+                                            </li>
+                                            <li class="expand-sub-item">
+                                                <a href="" title="Việt Nam">Việt Nam</a>
+                                            </li>
+                                            <li class="expand-sub-item">
+                                                <a href="" title="Edm">Edm</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-expand-item" style="height: 147px;">
+                                        <h4 class="expand-item-name">
+                                            <a href="" title="Ciné">Ciné</a>
+                                        </h4>
+                                        <ul class="expand-sub-list">
+                                            <li class="expand-sub-item">
+                                                <a href="" title="Mọt Phim">Mọt Phim</a>
+                                            </li>
+                                            <li class="expand-sub-item">
+                                                <a href="" title="Phim Việt Nam">Phim Việt Nam</a>
+                                            </li>
+                                            <li class="expand-sub-item">
+                                                <a href="" title="Phim Âu-Mỹ">Phim Âu-Mỹ</a>
+                                            </li>
+                                            <li class="expand-sub-item">
+                                                <a href="" title="Phim Châu Á">Phim Châu Á</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-expand-item" style="height: 147px;">
+                                        <h4 class="expand-item-name">
+                                            <a href="" title="tek-life">Tek-Life</a>
+                                        </h4>
+                                        <ul class="expand-sub-list">
+                                            <li class="expand-sub-item">
+                                                <a href="" title="metaverse">Metaverse</a>
+                                            </li>
+                                            <li class="expand-sub-item">
+                                                <a href="" title="how-to">How-To</a>
+                                            </li>
+                                            <li class="expand-sub-item">
+                                                <a href="" title="Wow">Wow</a>
+                                            </li>
+                                            <li class="expand-sub-item">
+                                                <a href="" title="2-Mall">2-Mall</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+
+                                    <li class="menu-expand-item" style="height: 97px;">
+                                        <h4 class="expand-item-name">
+                                            <a href="" title="Star">Star</a>
+                                        </h4>
+                                        <ul class="expand-sub-list">
+                                            <li class="expand-sub-item">
+                                                <a href="" title="Sao Việt">Sao Việt</a>
+                                            </li>
+                                            <li class="expand-sub-item">
+                                                <a href="" title="Paparazzi">Paparazzi</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-expand-item" style="height: 97px;">
+                                        <h4 class="expand-item-name">
+                                            <a href="" title="Xã Hội">Xã Hội</a>
+                                        </h4>
+                                        <ul class="expand-sub-list">
+
+                                            <li class="expand-sub-item">
+                                                <a href="" title="Pháp luật">Pháp Luật</a>
+                                            </li>
+                                            <li class="expand-sub-item">
+                                                <a href="" title="Nóng trên mạng">Nóng Trên Mạng</a>
+                                            </li>
+                                            <li class="expand-sub-item">
+                                                <a href="" title="Sống Xanh">Sống Xanh</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+
+                                    <li class="menu-expand-item" style="height: 97px;">
+                                        <h4 class="expand-item-name">
+                                            <a href="" title="Học Đường">Học Đường</a>
+                                        </h4>
+                                        <ul class="expand-sub-list">
+                                            <li class="expand-sub-item">
+                                                <a href="" title="Người Việt Trẻ">Người Việt Trẻ</a>
+                                            </li>
+                                            <li class="expand-sub-item">
+                                                <a href="" title="Du Học">Du Học</a>
+                                            </li>
+                                            <li class="expand-sub-item">
+                                                <a href="" title="Bản Tin 46'">Bản Tin 46'</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-expand-item" style="height: 97px;">
+                                        <h4 class="expand-item-name">
+                                            <a href="" title="Thế Giới Đó Đây">Thế Giới Đó Đây</a>
+                                        </h4>
+                                        <ul class="expand-sub-list">
+                                            <li class="expand-sub-item">
+                                                <a href="" title="Chùm ảnh">Chùm ảnh</a>
+                                            </li>
+                                            <li class="expand-sub-item">
+                                                <a href="" title="Khám phá">Khám phá</a>
+                                            </li>
+                                            <li class="expand-sub-item">
+                                                <a href="" title="Lạ &amp; Cool">Lạ &amp; Cool</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-expand-item" style="height: 72px;">
+                                        <h4 class="expand-item-name">
+                                            <a href="" title="Esports">Esports</a>
+                                        </h4>
+                                        <ul class="expand-sub-list">
+                                            <li class="expand-sub-item">
+                                                <a href="" title="Cao thủ">Cao thủ</a>
+                                            </li>
+                                            <li class="expand-sub-item">
+                                                <a href="" title="Đấu trường">Đấu trường</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-expand-item" style="height: 97px;">
+                                        <h4 class="expand-item-name">
+                                            <a href="" title="TV Show">TV Show</a>
+                                        </h4>
+                                        <h4 class="expand-item-name">
+                                            <a href="" title="Sức khỏe">Sức khỏe</a>
+                                        </h4>
+
+                                    </li>
+
+
+                                </ul>
+                                <!-- End .list-other-cat-col -->
+                                <div class="topics-wrapper">
+                                    <div class="topic-label">Nhóm chủ đề</div>
+                                    <ul class="topic-list d-flex">
+
+                                        <li class="topic-item">
+                                            <a href="" title="Quizz">
+                                                <img src="https://kenh14cdn.com/zoom/190_70/2016/cover-quizz-1458020660190.jpg" alt="Quizz">
+                                                <span>Quizz</span>
+                                            </a>
                                         </li>
-                                        <li>
-                                            <a href=""></a>
+
+                                        <li class="topic-item">
+                                            <a href="" title="eMagazine">
+                                                <img src="https://kenh14cdn.com/zoom/190_70/2016/magazine-cover-1470901702968.jpg" alt="eMagazine">
+                                                <span>eMagazine</span>
+                                            </a>
                                         </li>
-                                        <li>
-                                            <a href=""></a>
+
+                                        <li class="topic-item">
+                                            <a href="" title="Đọc Chậm">
+                                                <img src="https://kenh14cdn.com/zoom/190_70/2016/cover-doc-cham-1477989772612.jpg" alt="Đọc Chậm">
+                                                <span>Đọc Chậm</span>
+                                            </a>
                                         </li>
-                                        <li>
-                                            <a href=""></a>
-                                        </li>
+
+
                                     </ul>
-                                </li>
-                            </ul>
+                                </div>
+                                <div class="expand-links d-flex align-items-center">
+                                    <div class="expand-group d-flex align-items-center">
+                                        <h4 class="expand-label">Tải app</h4>
+                                        <ul class="expand-list d-flex p-0">
+                                            <li class="expand-item">
+                                                <a href="https://itunes.apple.com/us/app/kenh-14/id670518264?ls=1&amp;mt=8" target="_blank" title="Tải về từ App Store">iOS</a>
+                                            </li>
+                                            <li class="expand-item">
+                                                <a href="https://play.google.com/store/apps/details?id=vcc.mobilenewsreader.kenh14" target="_blank" title="Tải về từ Google Play">Android</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="expand-group d-flex">
+                                        <h4 class="expand-label"><a href="https://www.facebook.com/K14vn" title="Fanpage" target="_blank" rel="nofollow">Fanpage</a></h4>
+                                    </div>
+                                    <div class="expand-group d-flex">
+                                        <h4 class="expand-label"><a id="lnkContact" href="">Liên hệ</a></h4>
+                                        <ul class="expand-list d-flex p-0">
+
+                                            <li class="expand-item">
+                                                <a href="" title="Liên hệ quảng cáo" target="_blank">Quảng cáo</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
                     </li>
                 </ul>

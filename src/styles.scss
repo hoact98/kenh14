@@ -1,0 +1,41 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+    font-family: 'SFD-Heavy';
+    font-display: auto;
+    src: url(./assets/fonts/SFD-Medium.eot?);
+    src: url('./assets/fonts/SFD-Bold.eot?') format('embedded-opentype'), url('./assets/fonts/SFD-Bold.woff2'), url('./assets/fonts/SFD-Bold.woff') format('woff'), url('./assets/fonts/SFD-Bold.ttf') format('truetype'), url('./assets/fonts/SFD-Bold.svg#SFD-Bold') format('svg')
+}
+
+@font-face {
+    font-family: 'SFD-SemiBold';
+    font-display: auto;
+    src: url('./assets/fonts/SFD-Bold.eot?');
+    src: url('./assets/fonts/SFD-Bold.eot?') format('embedded-opentype'), url('./assets/fonts/SFD-Bold.woff2'), url('./assets/fonts/SFD-Bold.woff') format('woff'), url('./assets/fonts/SFD-Bold.ttf') format('truetype'), url('./assets/fonts/SFD-Bold.svg#SFD-Bold') format('svg')
+}
+
+@font-face {
+    font-family: 'SFD-Bold';
+    font-display: auto;
+    src: url('./assets/fonts/SFD-Bold.eot?');
+    src: url('./assets/fonts/SFD-Bold.eot?') format('embedded-opentype'), url('./assets/fonts/SFD-Bold.woff2'), url('./assets/fonts/SFD-Bold.woff') format('woff'), url('./assets/fonts/SFD-Bold.ttf') format('truetype'), url('./assets/fonts/SFD-Bold.svg#SFD-Bold') format('svg')
+}
+
+@font-face {
+    font-family: 'SFD-Medium';
+    font-display: auto;
+    src: url('./assets/fonts/SFD-Medium.eot?');
+    src: url('./assets/fonts/SFD-Medium.eot?') format('embedded-opentype'), url('./assets/fonts/SFD-Medium.woff2'), url('./assets/fonts/SFD-Medium.woff') format('woff'), url('./assets/fonts/SFD-Medium.ttf') format('truetype'), url('./assets/fonts/SFD-Medium.svg#SFD-Medium') format('svg')
+}
+
+@font-face {
+    font-family: 'SFD-Regular';
+    font-display: auto;
+    src: url('./assets/fonts/SFD-Medium.eot?');
+    src: url('./assets/fonts/SFD-Medium.eot?') format('embedded-opentype'), url('./assets/fonts/SFD-Medium.woff2'), url('./assets/fonts/SFD-Medium.woff') format('woff'), url('./assets/fonts/SFD-Medium.ttf') format('truetype'), url('./assets/fonts/SFD-Medium.svg#SFD-Medium') format('svg')
+}
