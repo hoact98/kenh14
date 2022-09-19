@@ -1,0 +1,12 @@
+.wrapper-left {
+    &::before {
+        background: url(../../../assets/images/grd-border.png) top right repeat-y;
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -20px;
+        width: 20px;
+        height: 100%;
+        z-index: -1;
+    }
+}

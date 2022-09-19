@@ -26,6 +26,10 @@
                     font-weight: bold;
                     color: #a1a1a1;
                     text-decoration: none;
+                    &:hover {
+                        text-decoration: underline;
+                        color: #bb3914;
+                    }
                 }
             }
         }

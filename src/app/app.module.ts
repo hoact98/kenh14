@@ -8,7 +8,6 @@ import { SiteFooterComponent } from './components/_layout/site-footer/site-foote
 import { SiteHeaderComponent } from './components/_layout/site-header/site-header.component';
 import { SiteLayoutHomeComponent } from './components/_layout/site-layout-home/site-layout-home.component';
 import { SiteSidebarComponent } from './components/_layout/site-sidebar/site-sidebar.component';
-import { CategoryNewComponent } from './modules/home/components/category-new/category-new.component';
 import { HomeComponent } from './modules/home/home.component';
 import { HomeModule } from './modules/home/components/home.module';
 @NgModule({
@@ -19,7 +18,6 @@ import { HomeModule } from './modules/home/components/home.module';
     SiteHeaderComponent,
     SiteLayoutHomeComponent,
     SiteSidebarComponent,
-    CategoryNewComponent,
     HomeComponent
   ],
   imports: [

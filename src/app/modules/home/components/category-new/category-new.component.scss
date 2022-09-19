@@ -1,0 +1,441 @@
+@import "~swiper/css";
+@import "~swiper/css/pagination";
+@import "~swiper/css/navigation";
+.swiper {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 30px;
+}
+
+.swiper-slide {
+    // text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    width: 250px !important;
+    margin-left: 20px !important;
+    margin-right: 0 !important;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.category-wrapper {
+    .category-news {
+        // padding-right: 20px;
+        .cate-news-item {
+            .cate-name {
+                margin: 20px 0;
+                a {
+                    display: block;
+                    padding-left: 12px;
+                    border-left: 4px solid #ff6115;
+                    font-family: SFD-Heavy;
+                    font-size: 23px;
+                    height: 20px;
+                    line-height: 20px;
+                    color: #2d2d2d;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    &:hover {
+                        color: #555;
+                    }
+                }
+            }
+            .cate-info {
+                width: 340px;
+                position: relative;
+                .cate-thumb {
+                    display: block;
+                    width: 340px;
+                    height: 213px;
+                    margin-bottom: 10px;
+                    position: relative;
+                    img {
+                        display: block;
+                        width: 340px;
+                        height: 213px;
+                    }
+                }
+                .cate-title {
+                    line-height: 24px;
+                    a {
+                        font-family: SFD-Bold;
+                        font-size: 20px;
+                        line-height: 24px;
+                        color: #2d2d2d;
+                        text-decoration: none;
+                        transition: color .3s;
+                        &:hover {
+                            color: #555;
+                        }
+                    }
+                }
+                .cate-txt {
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: #555;
+                    margin-top: 8px;
+                }
+            }
+            .cate-list {
+                list-style: none;
+                margin-top: 20px;
+                padding-left: 0;
+                .cate-item {
+                    padding: 15px 0;
+                    border-top: 1px solid #e9e9e9;
+                    a {
+                        font-family: SFD-Semibold;
+                        font-size: 15px;
+                        line-height: 18px;
+                        color: #2d2d2d;
+                        text-decoration: none;
+                        transition: color .3s;
+                        display: block;
+                        &:hover {
+                            color: #555;
+                        }
+                    }
+                }
+            }
+            &.fashion-cat {
+                .cate-info {
+                    .cate-thumb {
+                        height: 446px;
+                        img {
+                            height: 446px;
+                            overflow: hidden;
+                        }
+                    }
+                    .cate-title {
+                        position: absolute;
+                        bottom: -8px;
+                        right: 0;
+                        a {
+                            display: block;
+                            padding: 0 18px 30px;
+                            position: relative;
+                            color: #fff;
+                            z-index: 0;
+                            font-family: SFD-Medium;
+                            font-size: 24px;
+                            line-height: 28px;
+                            &::before {
+                                display: block;
+                                width: 100%;
+                                height: 200%;
+                                position: absolute;
+                                left: 0;
+                                bottom: 0;
+                                background-image: linear-gradient(rgba(0, 0, 0, 0) 10%, #000 90%);
+                                content: '';
+                                z-index: -1;
+                            }
+                        }
+                    }
+                }
+            }
+            &.travel-cat {
+                .cate-info {
+                    background: #efefef;
+                    padding-bottom: 30px;
+                    .cate-title,
+                    .cate-txt {
+                        padding: 0 15px;
+                    }
+                }
+            }
+        }
+    }
+    .other-sites-wrapper.category-news {
+        .cate-news-item {
+            width: 210px;
+            .cate-info {
+                width: 210px;
+                .cate-thumb {
+                    width: 210px;
+                    height: 130px;
+                    img {
+                        width: 210px;
+                        height: 130px;
+                    }
+                }
+                .cate-title {
+                    a {
+                        font-family: SFD-Semibold;
+                        font-size: 15px;
+                        line-height: 18px;
+                        color: #2d2d2d;
+                        text-decoration: none;
+                        transition: color .3s;
+                        -webkit-transition: color .3s;
+                        -moz-transition: color .3s;
+                        display: block;
+                        &:hover {
+                            color: #555;
+                        }
+                    }
+                }
+            }
+            &.soha,
+            &.family {
+                .cate-name a {
+                    border-left: none;
+                    padding-left: 30px;
+                    position: relative;
+                    font-size: 20px;
+                    line-height: 16px;
+                    &::before {
+                        display: block;
+                        width: 20px;
+                        height: 20px;
+                        position: absolute;
+                        top: -3px;
+                        left: 0;
+                        content: '';
+                        background: url(../../../../../assets/images/sprite-k14.20.png) -271px -115px no-repeat;
+                    }
+                    &:hover {
+                        color: #555;
+                    }
+                }
+            }
+            &.soha {
+                .cate-name a {
+                    &::before {
+                        background: url(../../../../../assets/images/sprite-k14.20.png) -271px -115px no-repeat;
+                    }
+                }
+            }
+            &.family {
+                .cate-name a::before {
+                    background: url(../../../../../assets/images/sprite-k14.20.png) -241px -115px no-repeat;
+                }
+            }
+        }
+    }
+    .slide-trend {
+        border-top: 1px solid #ebebeb;
+        padding: 25px 0;
+        .slide-trend-heading {
+            margin-bottom: 20px;
+            h3.trend-title {
+                font-family: SFD-Heavy;
+                font-size: 28px;
+                position: relative;
+                margin-left: 20px;
+                display: block;
+                text-transform: uppercase;
+                margin-top: 20px;
+                margin-top: 0;
+                &::before {
+                    width: 6px;
+                    height: 28px;
+                    position: absolute;
+                    top: 0;
+                    left: -20px;
+                    content: '';
+                    background: #fb6c27;
+                }
+            }
+            a.trend-next {
+                display: block;
+                float: right;
+                height: 38px;
+                border: 1px solid #ccc;
+                padding: 0 12px;
+                font-family: SFD-Bold;
+                font-size: 18px;
+                line-height: 38px;
+                color: #555;
+                text-decoration: none;
+                border-radius: 3px;
+                -webkit-border-radius: 3px;
+                -moz-border-radius: 3px;
+                background-image: linear-gradient(#fff, #dcdcdc);
+                transition: background .3s;
+                -webkit-transition: background .3s;
+                -moz-transition: background .3s;
+                margin-top: -10px;
+                span {
+                    display: block;
+                    padding-right: 25px;
+                    position: relative;
+                    &::after {
+                        display: block;
+                        width: 17px;
+                        height: 15px;
+                        background: url(../../../../../assets/images/sprite-k14.20.png) -501px -81px no-repeat;
+                        position: absolute;
+                        top: 10px;
+                        right: 0;
+                        content: '';
+                    }
+                }
+                &:hover {
+                    background-image: linear-gradient(#fff, #eaeaea);
+                }
+            }
+        }
+        .slide-trend-info {
+            background: #f5f5f5;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+            border: 1px solid #e6e6e6;
+            padding: 15px 0 20px 0;
+            h3.slide-trend-title {
+                color: #222;
+                margin-bottom: 18px;
+                margin-left: 0 !important;
+                padding-left: 20px;
+                font-family: SFD-Heavy;
+                font-size: 24px;
+                text-transform: uppercase;
+                position: relative;
+                a {
+                    font-family: SFD-Bold;
+                    font-size: 26px;
+                    color: #393c54;
+                    text-decoration: none;
+                    text-transform: capitalize;
+                    display: inline-block;
+                    padding-left: 24px;
+                    position: relative;
+                    &::after {
+                        display: block;
+                        width: 17px;
+                        height: 16px;
+                        background: url(../../../../../assets/images/sprite-k14.20.png) -388px -31px no-repeat;
+                        position: absolute;
+                        top: 7px;
+                        left: 0;
+                        content: '';
+                    }
+                }
+            }
+            .slide-wrapper {
+                position: relative;
+                margin-top: 30px;
+                overflow: hidden;
+                &:hover .mySwiper .swiper-button-prev {
+                    left: 0;
+                }
+                .mySwiper {
+                    .swiper-button-next {
+                        position: absolute;
+                        top: 52px;
+                        right: 0;
+                        width: 35px;
+                        height: 95px;
+                        z-index: 10;
+                        cursor: pointer;
+                        background: url(../../../../../assets/images/sprite-k14.20.png) -115px -137px no-repeat;
+                        background-color: rgba(251, 108, 39, .9);
+                        border-top-left-radius: 3px;
+                        -webkit-border-top-left-radius: 3px;
+                        -moz-border-radius-topleft: 3px;
+                        border-bottom-left-radius: 3px;
+                        -webkit-border-bottom-left-radius: 3px;
+                        -moz-border-radius-bottomleft: 3px;
+                        &.swiper-button-disabled {
+                            background-color: #333 !important;
+                            width: 35px;
+                            opacity: .8;
+                            display: block;
+                            pointer-events: all;
+                        }
+                        &:hover {
+                            background-color: rgba(251, 108, 39, 1);
+                        }
+                        &::after {
+                            display: none;
+                        }
+                    }
+                    .swiper-button-prev {
+                        position: absolute;
+                        top: 52px;
+                        left: -35px;
+                        width: 35px;
+                        height: 95px;
+                        z-index: 10;
+                        cursor: pointer;
+                        background: url(../../../../../assets/images/sprite-k14.20.png) -70px -137px no-repeat;
+                        background-color: rgba(251, 108, 39, .9);
+                        border-top-right-radius: 3px;
+                        -webkit-border-top-right-radius: 3px;
+                        -moz-border-radius-topright: 3px;
+                        border-bottom-right-radius: 3px;
+                        -webkit-border-bottom-right-radius: 3px;
+                        -moz-border-radius-bottomright: 3px;
+                        &.swiper-button-disabled {
+                            background-color: #333 !important;
+                            width: 35px;
+                            opacity: .8;
+                            display: block;
+                            pointer-events: all;
+                        }
+                        &:hover {
+                            background-color: rgba(251, 108, 39, 1);
+                        }
+                        &::after {
+                            display: none;
+                        }
+                    }
+                    .swiper-pagination {
+                        margin-top: 15px;
+                        bottom: -6px;
+                        .swiper-pagination-bullet-active {
+                            background: #fb512a !important;
+                        }
+                        .swiper-pagination-bullet {
+                            margin: 0 8px !important;
+                        }
+                    }
+                    .slide-item {
+                        border: 1px solid #e6e6e6;
+                        box-shadow: 0 1px 5px 0 rgb(0 0 0 / 5%);
+                        border-radius: 3px;
+                        a.slide-item-thumb {
+                            text-decoration: none;
+                        }
+                        h4.slide-item-title {
+                            padding: 0 12px;
+                            line-height: 20px;
+                            a {
+                                text-decoration: none;
+                                font-family: SFD-Bold;
+                                font-weight: normal;
+                                letter-spacing: 0;
+                                font-size: 17px;
+                                line-height: 22px;
+                                color: #2d2d2d;
+                                transition: color .3s;
+                                &:hover {
+                                    color: #555;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
