@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 @Component({
   selector: 'app-site-layout-post',
   templateUrl: './site-layout-post.component.html',
@@ -7,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SiteLayoutPostComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }

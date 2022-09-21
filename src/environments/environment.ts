@@ -3,7 +3,39 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  data :[
+    {
+      id: 20220921072648674,
+      slug: 'adam-levine-len-tieng-sau-khi-bi-to-ngoai-tinh-luc-vo-mang-thai-20220921072648674.chn',
+      title: 'Adam Levine lên tiếng sau khi bị tố ngoại tình lúc vợ mang thai',
+      content: 'Adam Levine là một trong những sao nam đào hoa khi có tình sử hẹn hò toàn chân dài. Trước khi nghiêm túc xây dựng tổ ấm với cựu thiên thần Victoria'
+    },
+    {
+      id: 20220921072648666,
+      slug: 'tp-ho-chi-minh-so-ca-mac-tay-chan-mieng-gia-tang-20220921072648666.chn',
+      title: 'TP. Hồ Chí Minh: Số ca mắc tay chân miệng gia tăng',
+      content: 'Về dịch sốt xuất huyết: Trong tuần 38, thành phố ghi nhận 2.657 ca bệnh sốt xuất huyết, giảm 2,8% so với trung bình 4 tuần trước, số ca nội trú giảm 21% và ngoại trú tăng 17%. Hầu hết các quận huyện đều có số mắc giảm so với số mắc trung bình 4 tuần trước.'
+    },
+    {
+      id: 20220921140819605,
+      slug: 'manh-tay-ran-de-nghe-si-vuong-be-boi-20220921140819605.chn',
+      title: 'Mạnh tay răn đe nghệ sĩ vướng bê bối',
+      content: 'Nam diễn viên Hồng Đăng cũng liên tục đăng ảnh chơi golf, tiệc tùng lên mạng xã hội Facebook chỉ sau 2 tháng ngừng cập nhật do "sự cố bất khả kháng" ở Tây Ban Nha.'
+    },
+    {
+      id: 20220921141756602,
+      slug: 'gui-con-di-chua-benh-dau-don-nhan-ve-hu-tro-cot-thay-quang-ac-lam-me-a-20220921141756602.chn',
+      title: 'Gửi con đi chữa bệnh đau đớn nhận về hũ tro cốt: "Thầy Quang ác lắm mẹ ạ"',
+      content: 'Chị C.K chia sẻ, sau khi đưa con về nhà từ tay ông Lê Minh Quang, gia đình từng có ý định làm đơn tố cáo hành vi bạo hành của ông này với con mình nhưng vì lo lắng nếu sự việc lan rộng sẽ ảnh hưởng không tốt đến tâm lý của con cũng như danh tiếng của gia đình nên còn do dự.'
+    },
+    {
+      id: 20220921074820406,
+      slug: 'hom-nay-gia-xang-dau-tiep-tuc-giam-20220921074820406.chn',
+      title: 'Hôm nay, giá xăng dầu tiếp tục giảm',
+      content: 'Trả lời VTC News, một lãnh đạo doanh nghiệp kinh doanh xăng dầu đầu mối cho hay, giá xăng dầu thành phẩm tham chiếu trên thị trường Singapore hiện thấp hơn giá bán trong nước.'
+    }
+  ]
 };
 
 /*

@@ -1,0 +1,33 @@
+.top-submenu {
+    padding: 0 40px;
+    border-bottom: 1px solid #e7e8ea;
+    justify-content: space-between;
+    .list-submenu-left,
+    .list-submenu-right {
+        list-style: none;
+        padding-left: 0;
+        margin-bottom: 0;
+        .submenu-item {
+            a {
+                display: block;
+                font-family: SFD-SemiBold;
+                font-size: 15px;
+                line-height: 48px;
+                color: #333;
+                text-decoration: none;
+                text-transform: uppercase;
+                border-bottom: 4px solid transparent;
+                &:hover,
+                &.active {
+                    border-bottom: 4px solid #c81926;
+                }
+            }
+        }
+    }
+    .list-submenu-left .submenu-item {
+        margin-right: 20px;
+    }
+    .list-submenu-right .submenu-item {
+        margin-left: 20px;
+    }
+}

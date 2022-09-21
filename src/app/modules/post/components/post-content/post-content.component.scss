@@ -1,0 +1,191 @@
+.post-wrapper {
+    .post-header {
+        h1.post-tilte {
+            font-size: 31px;
+            line-height: 36px;
+            padding-right: 0;
+            font-family: SFD-Bold;
+            color: #222;
+        }
+        .post-meta {
+            .post-meta-left {
+                .meta-author {
+                    color: #fb6c27;
+                    font-size: 13px;
+                    font-family: SFD-Semibold;
+                    text-transform: uppercase;
+                }
+                .meta-time {
+                    font-family: SFD-SemiBold;
+                    font-size: 13px;
+                    color: #777;
+                    position: relative;
+                    padding-left: 16px;
+                    margin-left: 5px;
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        background: url(../../../../../assets/images/sprite-k14.20.png) -377px 0 no-repeat;
+                        width: 15px;
+                        height: 15px;
+                        left: 0;
+                        top: 1px;
+                        background-size: 496px;
+                    }
+                }
+            }
+            .post-meta-right {
+                // .audio-player {}
+                .user-voice-list {
+                    margin: 0 5px;
+                    position: relative;
+                    &.active ul.voice-list {
+                        display: block;
+                    }
+                    a {
+                        svg {
+                            fill: #fa6b24;
+                        }
+                    }
+                    ul.voice-list {
+                        position: absolute;
+                        list-style: none;
+                        padding: 0;
+                        background-color: #eee;
+                        margin: 0;
+                        right: 0;
+                        top: 100%;
+                        width: 160px;
+                        display: none;
+                        li a {
+                            text-decoration: none;
+                            color: #222;
+                            font: 600 13px/normal Arial;
+                            display: block;
+                            padding: 5px 10px;
+                            &:hover {
+                                background: rgba(0, 0, 0, .3);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .post-socials {
+            padding-bottom: 15px;
+            border-bottom: 1px dotted #d9d9d9;
+        }
+    }
+    .post-info {
+        padding: 0 40px 0 80px;
+        h2 {
+            font-size: 17px;
+            line-height: 22px;
+            border-top: 0;
+            padding-top: 5px;
+            font-family: SFD-Bold;
+            font-weight: normal;
+            color: #111;
+        }
+        .relation-news-wrapper {
+            margin-top: 0;
+            border-top: 0;
+            border-bottom: 1px solid #efefef;
+            margin-bottom: 15px;
+            padding: 0 0 10px 0;
+            ul.relation-news-list {
+                list-style: none;
+                margin-left: 20px;
+                li.relation-news-item {
+                    margin-left: -9px;
+                    margin-bottom: 6px;
+                    a {
+                        font-size: 13px;
+                        line-height: 16px;
+                        color: #383e54;
+                        text-decoration: none;
+                        position: relative;
+                        &::before {
+                            width: 5px;
+                            height: 5px;
+                            border-radius: 100%;
+                            background: #fb6c27;
+                            content: '';
+                            position: absolute;
+                            top: 4px;
+                            left: -12px;
+                        }
+                        .icon-show-popup {
+                            display: inline-block;
+                            height: 10px;
+                            width: 10px;
+                            background: url(../../../../../assets/images/icon-popup.png) no-repeat;
+                        }
+                    }
+                }
+            }
+        }
+        .post-content {
+            p {
+                font-size: 17px;
+                line-height: 25px;
+                color: #222;
+                font-family: "Times New Roman", Georgia, Serif;
+                margin-bottom: 25px;
+            }
+        }
+        .post-rate-link {
+            padding-top: 10px;
+            margin-bottom: 30px;
+            a {
+                font-size: 23px;
+                line-height: 29px;
+                color: #004370;
+                font-weight: bold;
+                padding-left: 25px;
+                font-family: 'Times New Roman';
+                text-decoration: none;
+                position: relative;
+                &::before {
+                    background: url(../../../../../assets/images/bg_linkfooter.jpg) center center no-repeat;
+                    width: 23px;
+                    height: 21px;
+                    top: 3px;
+                    left: -1px;
+                    content: '';
+                    position: absolute;
+                }
+            }
+        }
+    }
+    .post-bottom {
+        .new-tags {
+            margin-bottom: 30px !important;
+            ul.tag-list {
+                list-style: none;
+                li.tag-item {
+                    margin-bottom: 8px;
+                    margin-right: 10px;
+                    a {
+                        padding: 8px 10px;
+                        display: block;
+                        font-family: Arial;
+                        font-size: 14px;
+                        text-decoration: none;
+                        background: #ebebeb;
+                        color: #555;
+                        border-radius: 3px;
+                        transition: background .3s, color .3s;
+                        &::before {
+                            content: '#';
+                        }
+                        &:hover {
+                            background: #555;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
