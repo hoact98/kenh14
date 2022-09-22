@@ -35,6 +35,20 @@ export const environment = {
       title: 'Hôm nay, giá xăng dầu tiếp tục giảm',
       content: 'Trả lời VTC News, một lãnh đạo doanh nghiệp kinh doanh xăng dầu đầu mối cho hay, giá xăng dầu thành phẩm tham chiếu trên thị trường Singapore hiện thấp hơn giá bán trong nước.'
     }
+  ],
+  cate: [
+    {
+      id: 1,
+      title: 'Star - Tin tức ngôi sao, giải trí, scandal, hậu trường showbiz - Kenh14.vn',
+      slug: 'star.chn',
+      name: 'star'
+    },
+    {
+      id: 2,
+      title: 'Học đường - Zoom vào thế giới giáo dục học đường - Kenh14.vn',
+      slug: 'hoc-duong.chn',
+      name: 'Học đường'
+    },
   ]
 };
 

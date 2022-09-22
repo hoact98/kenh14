@@ -1,0 +1,89 @@
+.featured-cate-wrapper {
+    .featured-cate {
+        // padding-right: 20px;
+        .featured-cate-item {
+            margin-right: 20px;
+            .cate-name {
+                margin: 20px 0;
+                a {
+                    display: block;
+                    padding-left: 12px;
+                    border-left: 4px solid #ff6115;
+                    font-family: SFD-Heavy;
+                    font-size: 23px;
+                    height: 20px;
+                    line-height: 20px;
+                    color: #2d2d2d;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    &:hover {
+                        color: #555;
+                    }
+                }
+            }
+            .cate-info {
+                width: 340px;
+                position: relative;
+                .cate-thumb {
+                    display: block;
+                    width: 340px;
+                    height: 213px;
+                    margin-bottom: 10px;
+                    position: relative;
+                    img {
+                        display: block;
+                        width: 340px;
+                        height: 213px;
+                    }
+                }
+                .cate-title {
+                    line-height: 24px;
+                    a {
+                        font-family: SFD-Bold;
+                        font-size: 20px;
+                        line-height: 24px;
+                        color: #2d2d2d;
+                        text-decoration: none;
+                        transition: color .3s;
+                        &:hover {
+                            color: #555;
+                        }
+                    }
+                }
+                .cate-txt {
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: #555;
+                    margin-top: 8px;
+                }
+            }
+            .cate-list {
+                list-style: none;
+                margin-top: 20px;
+                padding-left: 0;
+                .cate-item {
+                    padding: 15px 0;
+                    &:first-of-type {
+                        border-top: 1px solid #e9e9e9;
+                    }
+                    .cate-item-thumb {
+                        display: block;
+                        margin-right: 15px;
+                    }
+                    a {
+                        font-family: SFD-Semibold;
+                        font-size: 15px;
+                        line-height: 18px;
+                        color: #2d2d2d;
+                        text-decoration: none;
+                        transition: color .3s;
+                        display: block;
+                        &:hover {
+                            color: #555;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

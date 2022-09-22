@@ -11,7 +11,7 @@ import { environment } from 'src/environments/environment';
 export class PostContentComponent implements OnInit {
 
   constructor(private titleService:Title, private route: ActivatedRoute) { }
-
+  id:any;
   slug: any;
   title: any;
   content: any;
@@ -20,15 +20,21 @@ export class PostContentComponent implements OnInit {
       this.voice = false;
      this.route.params.subscribe(params => {
       this.slug = params['slug'];
-      let regex = /\d+/g;
-      let matches = params['slug'].match(regex);
-      alert(matches)
-      console.log(matches.toString());
+      // let regex = /\d+/g;
+      let regex = /(\/[a-zA-Z0-9_\-.]+)*?\d+.chn{1}$/ig;
+      let matches = params['slug'].match(regex).toString();
+      // alert(matches)
+      this.id = matches.replace('.chn', '')
+      console.log(this.id);
       // console.log(matches);
-      let post = environment.data.filter(element => element.slug == this.slug)[0];
-      this.title = post.title;
-      this.content = post.content;
-      this.titleService.setTitle(this.title);
+      let post = environment.data.filter(element => element.id == this.id);
+      if(post.length>0){
+        this.title = post[0].title;
+        this.content = post[0].content;
+        this.titleService.setTitle(this.title);
+      }else{
+
+      }
 
     });
   }

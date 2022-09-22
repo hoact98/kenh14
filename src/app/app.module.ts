@@ -17,6 +17,12 @@ import { TopMenuComponent } from './modules/post/components/top-menu/top-menu.co
 import { PostContentComponent } from './modules/post/components/post-content/post-content.component';
 import { SameCategoryComponent } from './modules/post/components/same-category/same-category.component';
 import { HotDailyComponent } from './modules/post/components/hot-daily/hot-daily.component';
+import { CateComponent } from './modules/cate/cate.component';
+import { MenuCateComponent } from './modules/cate/components/menu-cate/menu-cate.component';
+import { NewStreamCateComponent } from './modules/cate/components/new-stream-cate/new-stream-cate.component';
+import { FeaturedCateComponent } from './modules/cate/components/featured-cate/featured-cate.component';
+import { SiteLayoutCateComponent } from './components/_layout/site-layout-cate/site-layout-cate.component';
+import { CateModule } from './modules/cate/cate.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,13 +37,19 @@ import { HotDailyComponent } from './modules/post/components/hot-daily/hot-daily
     TopMenuComponent,
     PostContentComponent,
     SameCategoryComponent,
-    HotDailyComponent
+    HotDailyComponent,
+    CateComponent,
+    MenuCateComponent,
+    NewStreamCateComponent,
+    FeaturedCateComponent,
+    SiteLayoutCateComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HomeModule,
-    PostModule
+    PostModule,
+    CateModule
   ],
   providers: [],
   bootstrap: [AppComponent]

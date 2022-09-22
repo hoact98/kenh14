@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SwiperModule } from 'swiper/angular';
-import { NewStreamPostComponent } from './components/new-stream-post/new-stream-post.component';
+import { TopNewsComponent } from './components/top-news/top-news.component';
 @NgModule({
   declarations: [
-    NewStreamPostComponent
+    TopNewsComponent
   ],
   imports: [
     CommonModule,
     SwiperModule
   ],
   exports: [
-    NewStreamPostComponent
+    TopNewsComponent
   ]
 })
-export class PostModule { }
+export class CateModule { }
