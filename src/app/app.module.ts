@@ -10,7 +10,7 @@ import { SiteLayoutHomeComponent } from './components/_layout/site-layout-home/s
 import { SiteSidebarComponent } from './components/_layout/site-sidebar/site-sidebar.component';
 import { SiteLayoutPostComponent } from './components/_layout/site-layout-post/site-layout-post.component';
 import { HomeComponent } from './modules/home/home.component';
-import { HomeModule } from './modules/home/components/home.module';
+import { HomeModule } from './modules/home/home.module';
 import { PostModule } from './modules/post/post.module';
 import { PostComponent } from './modules/post/post.component';
 import { TopMenuComponent } from './modules/post/components/top-menu/top-menu.component';

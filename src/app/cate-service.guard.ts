@@ -10,22 +10,15 @@ export class CateServiceGuard implements CanActivate {
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-      console.log(route.params);
-    //   let regex = /(\/[a-zA-Z0-9_\-.]+)*?.chn{1}$/ig;
-    //   let matches = route.params['slug'].match(regex);
-    //  console.log(matches)
+      // console.log(route.params);
+      let regex = /([a-zA-Z0-9_\-.]+)*?.chn{1}$/ig;
+      let matches = route.params['slug'].match(regex);
+      // console.log(matches)
 
-      // if(!matches){
-      //   this.router.navigate(
-      //     ['cate'],
-      //     {
-      //       queryParams: route.params,
-      //       skipLocationChange: true,
-      //       queryParamsHandling:"merge"
-      //     }
-      //   );
-      //   return false;
-      // }
+      if(!matches){
+        this.router.navigate(['']);
+        return false;
+      }
       return true;
   }
 

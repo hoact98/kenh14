@@ -44,111 +44,32 @@
                     </div>
                 </div>
             </div>
-            <div class="home-star-item">
-                <div class="row">
-                    <div class="col-4">
-                        <div class="home-star-left">
-                            <a href="">
-                                <img src="../../../../../assets/images/home-star1.jpg" alt="" class="img-fluid">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-8">
-                        <div class="home-star-right">
-                            <h3 class="home-star-title">
-                                <a href="">
-                                Xét xử tài xế taxi chiếm đoạt điện thoại của 2 nữ du khách người Nga
-                            </a>
-                            </h3>
-                            <div class="home-star-meta">
-                                <span class="home-star-time"> 8 giờ trước</span>
+            <ng-container *ngFor="let post of posts; let i = index">
+                <div class="home-star-item">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="home-star-left">
+                                <a href="" routerLink="/{{post.id}}/{{post.slug}}">
+                                    <img src="../../../../../{{post.img}}" alt="" class="img-fluid">
+                                </a>
                             </div>
-                            <span class="home-star-trim">
-                            Trong quá trình chở 2 nữ du khách nước ngoài, Hưng nảy sinh lòng tham nên đã chiếm đoạt 2 chiếc điện thoại có tổng trị ...
-                        </span>
+                        </div>
+                        <div class="col-8">
+                            <div class="home-star-right">
+                                <h3 class="home-star-title">
+                                    <a href="" routerLink="/{{post.id}}/{{post.slug}}">{{post.title}}</a>
+                                </h3>
+                                <div class="home-star-meta">
+                                    <span class="home-star-time"> 8 giờ trước</span>
+                                </div>
+                                <span class="home-star-trim">
+                               {{post.content}}
+                            </span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="home-star-item">
-                <div class="row">
-                    <div class="col-4">
-                        <div class="home-star-left">
-                            <a href="">
-                                <img src="../../../../../assets/images/home-star1.jpg" alt="" class="img-fluid">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-8">
-                        <div class="home-star-right">
-                            <h3 class="home-star-title">
-                                <a href="">
-                                Xét xử tài xế taxi chiếm đoạt điện thoại của 2 nữ du khách người Nga
-                            </a>
-                            </h3>
-                            <div class="home-star-meta">
-                                <span class="home-star-time"> 8 giờ trước</span>
-                            </div>
-                            <span class="home-star-trim">
-                            Trong quá trình chở 2 nữ du khách nước ngoài, Hưng nảy sinh lòng tham nên đã chiếm đoạt 2 chiếc điện thoại có tổng trị ...
-                        </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="home-star-item">
-                <div class="row">
-                    <div class="col-4">
-                        <div class="home-star-left">
-                            <a href="">
-                                <img src="../../../../../assets/images/home-star1.jpg" alt="" class="img-fluid">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-8">
-                        <div class="home-star-right">
-                            <h3 class="home-star-title">
-                                <a href="">
-                                Xét xử tài xế taxi chiếm đoạt điện thoại của 2 nữ du khách người Nga
-                            </a>
-                            </h3>
-                            <div class="home-star-meta">
-                                <span class="home-star-time"> 8 giờ trước</span>
-                            </div>
-                            <span class="home-star-trim">
-                            Trong quá trình chở 2 nữ du khách nước ngoài, Hưng nảy sinh lòng tham nên đã chiếm đoạt 2 chiếc điện thoại có tổng trị ...
-                        </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="home-star-item">
-                <div class="row">
-                    <div class="col-4">
-                        <div class="home-star-left">
-                            <a href="">
-                                <img src="../../../../../assets/images/home-star1.jpg" alt="" class="img-fluid">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-8">
-                        <div class="home-star-right">
-                            <h3 class="home-star-title">
-                                <a href="">
-                                Xét xử tài xế taxi chiếm đoạt điện thoại của 2 nữ du khách người Nga
-                            </a>
-                            </h3>
-                            <div class="home-star-meta">
-                                <span class="home-star-time"> 8 giờ trước</span>
-                            </div>
-                            <span class="home-star-trim">
-                            Trong quá trình chở 2 nữ du khách nước ngoài, Hưng nảy sinh lòng tham nên đã chiếm đoạt 2 chiếc điện thoại có tổng trị ...
-                        </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+            </ng-container>
         </div>
     </div>
     <div class="slide-trend">
@@ -293,110 +214,32 @@
                     </div>
                 </div>
             </div>
-            <div class="home-star-item">
-                <div class="row">
-                    <div class="col-4">
-                        <div class="home-star-left">
-                            <a href="">
-                                <img src="../../../../../assets/images/home-star1.jpg" alt="" class="img-fluid">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-8">
-                        <div class="home-star-right">
-                            <h3 class="home-star-title">
-                                <a href="">
-                              Xét xử tài xế taxi chiếm đoạt điện thoại của 2 nữ du khách người Nga
-                          </a>
-                            </h3>
-                            <div class="home-star-meta">
-                                <span class="home-star-time"> 8 giờ trước</span>
+            <ng-container *ngFor="let post of posts; let i = index">
+                <div class="home-star-item">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="home-star-left">
+                                <a href="" routerLink="/{{post.id}}/{{post.slug}}">
+                                    <img src="../../../../../{{post.img}}" alt="" class="img-fluid">
+                                </a>
                             </div>
-                            <span class="home-star-trim">
-                          Trong quá trình chở 2 nữ du khách nước ngoài, Hưng nảy sinh lòng tham nên đã chiếm đoạt 2 chiếc điện thoại có tổng trị ...
-                      </span>
+                        </div>
+                        <div class="col-8">
+                            <div class="home-star-right">
+                                <h3 class="home-star-title">
+                                    <a href="" routerLink="/{{post.id}}/{{post.slug}}">{{post.title}}</a>
+                                </h3>
+                                <div class="home-star-meta">
+                                    <span class="home-star-time"> 8 giờ trước</span>
+                                </div>
+                                <span class="home-star-trim">
+                                 {{post.content}}
+                              </span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="home-star-item">
-                <div class="row">
-                    <div class="col-4">
-                        <div class="home-star-left">
-                            <a href="">
-                                <img src="../../../../../assets/images/home-star1.jpg" alt="" class="img-fluid">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-8">
-                        <div class="home-star-right">
-                            <h3 class="home-star-title">
-                                <a href="">
-                              Xét xử tài xế taxi chiếm đoạt điện thoại của 2 nữ du khách người Nga
-                          </a>
-                            </h3>
-                            <div class="home-star-meta">
-                                <span class="home-star-time"> 8 giờ trước</span>
-                            </div>
-                            <span class="home-star-trim">
-                          Trong quá trình chở 2 nữ du khách nước ngoài, Hưng nảy sinh lòng tham nên đã chiếm đoạt 2 chiếc điện thoại có tổng trị ...
-                      </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="home-star-item">
-                <div class="row">
-                    <div class="col-4">
-                        <div class="home-star-left">
-                            <a href="">
-                                <img src="../../../../../assets/images/home-star1.jpg" alt="" class="img-fluid">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-8">
-                        <div class="home-star-right">
-                            <h3 class="home-star-title">
-                                <a href="">
-                              Xét xử tài xế taxi chiếm đoạt điện thoại của 2 nữ du khách người Nga
-                          </a>
-                            </h3>
-                            <div class="home-star-meta">
-                                <span class="home-star-time"> 8 giờ trước</span>
-                            </div>
-                            <span class="home-star-trim">
-                          Trong quá trình chở 2 nữ du khách nước ngoài, Hưng nảy sinh lòng tham nên đã chiếm đoạt 2 chiếc điện thoại có tổng trị ...
-                      </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="home-star-item">
-                <div class="row">
-                    <div class="col-4">
-                        <div class="home-star-left">
-                            <a href="">
-                                <img src="../../../../../assets/images/home-star1.jpg" alt="" class="img-fluid">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-8">
-                        <div class="home-star-right">
-                            <h3 class="home-star-title">
-                                <a href="">
-                              Xét xử tài xế taxi chiếm đoạt điện thoại của 2 nữ du khách người Nga
-                          </a>
-                            </h3>
-                            <div class="home-star-meta">
-                                <span class="home-star-time"> 8 giờ trước</span>
-                            </div>
-                            <span class="home-star-trim">
-                          Trong quá trình chở 2 nữ du khách nước ngoài, Hưng nảy sinh lòng tham nên đã chiếm đoạt 2 chiếc điện thoại có tổng trị ...
-                      </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </ng-container>
 
         </div>
     </div>

@@ -10,17 +10,17 @@ export class PostServiceGuard implements CanActivate {
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-      console.log(route.params);
-      let regex = /(\/[a-zA-Z0-9_\-.]+)*?\d+.chn{1}$/ig;
+      // console.log(route.params);
+      let regex = /([a-zA-Z0-9_\-.]+)*?\d+.chn{1}$/ig;
       let matches = route.params['slug'].match(regex);
       if(!matches){
         this.router.navigate(
-          ['cate'],
-          {
-            queryParams: route.params,
-            skipLocationChange: true,
-            queryParamsHandling:"merge"
-          }
+          [route.params['slug']],
+          // {
+          //   queryParams: route.params,
+          //   skipLocationChange: true,
+          //   queryParamsHandling:"merge"
+          // }
         );
         return false;
       }

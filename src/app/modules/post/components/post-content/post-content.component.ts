@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Title} from "@angular/platform-browser";
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { Router, ActivatedRoute, ParamMap, RouterModule } from '@angular/router';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -11,11 +11,11 @@ import { environment } from 'src/environments/environment';
 export class PostContentComponent implements OnInit {
 
   constructor(private titleService:Title, private route: ActivatedRoute) { }
-  id:any;
-  slug: any;
-  title: any;
-  content: any;
-  voice: any;
+    id:any;
+    slug: any;
+    title: any;
+    content: any;
+    voice: any;
    ngOnInit(): void {
       this.voice = false;
      this.route.params.subscribe(params => {
@@ -25,7 +25,7 @@ export class PostContentComponent implements OnInit {
       let matches = params['slug'].match(regex).toString();
       // alert(matches)
       this.id = matches.replace('.chn', '')
-      console.log(this.id);
+      // console.log(this.id);
       // console.log(matches);
       let post = environment.data.filter(element => element.id == this.id);
       if(post.length>0){

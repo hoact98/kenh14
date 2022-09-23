@@ -19,18 +19,9 @@ const routes: Routes = [
       },
     ],
   },
+
   {
-    path : 'cate',
-    component : SiteLayoutCateComponent,
-    children: [
-      {
-        path: '',  // child route path
-        component: CateComponent,  // child route component that the router renders
-      },
-    ],
-  },
-  {
-    path : ':slug',
+    path : ':id/:slug',
     component : SiteLayoutPostComponent,
     canActivate: [PostServiceGuard],
     children: [
@@ -40,7 +31,17 @@ const routes: Routes = [
       },
     ],
   },
-
+  {
+    path : ':slug',
+    component : SiteLayoutCateComponent,
+    children: [
+      {
+        path: '',  // child route path
+        component: CateComponent,  // child route component that the router renders
+        canActivate: [CateServiceGuard],
+      },
+    ],
+  },
 
 ]; // sets up routes constant where you define your routes
 
@@ -49,7 +50,8 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
   providers: [
-    PostServiceGuard
+    PostServiceGuard,
+    CateServiceGuard
   ]
 })
 export class AppRoutingModule { }
