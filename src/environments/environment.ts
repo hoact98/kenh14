@@ -9,7 +9,7 @@ export const environment = {
       id: 20220921072648674,
       cateName: 'Star',
       cateSlug: 'star.chn',
-      img: 'assets/images/home-star1.jpg',
+      img: 'assets/images/home-star2.jpg',
       slug: 'adam-levine-len-tieng-sau-khi-bi-to-ngoai-tinh-luc-vo-mang-thai-20220921072648674.chn',
       title: 'Adam Levine lên tiếng sau khi bị tố ngoại tình lúc vợ mang thai',
       content: 'Adam Levine là một trong những sao nam đào hoa khi có tình sử hẹn hò toàn chân dài. Trước khi nghiêm túc xây dựng tổ ấm với cựu thiên thần Victoria'
@@ -18,7 +18,7 @@ export const environment = {
       id: 20220921072648666,
       cateName: 'Xã hội',
       cateSlug: 'xa-hoi.chn',
-      img: 'assets/images/home-star2.jpg',
+      img: 'assets/images/home-star1.jpg',
       slug: 'tp-ho-chi-minh-so-ca-mac-tay-chan-mieng-gia-tang-20220921072648666.chn',
       title: 'TP. Hồ Chí Minh: Số ca mắc tay chân miệng gia tăng',
       content: 'Về dịch sốt xuất huyết: Trong tuần 38, thành phố ghi nhận 2.657 ca bệnh sốt xuất huyết, giảm 2,8% so với trung bình 4 tuần trước, số ca nội trú giảm 21% và ngoại trú tăng 17%. Hầu hết các quận huyện đều có số mắc giảm so với số mắc trung bình 4 tuần trước.'
