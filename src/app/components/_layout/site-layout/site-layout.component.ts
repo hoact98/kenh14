@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Title} from "@angular/platform-browser";
+import {TranslateService} from "@ngx-translate/core";
 @Component({
   selector: 'app-site-layout',
   templateUrl: './site-layout.component.html',
@@ -7,9 +7,15 @@ import {Title} from "@angular/platform-browser";
 })
 export class SiteLayoutComponent implements OnInit {
 
-  constructor() { }
+  constructor(private translate: TranslateService) {
+    // language
+    translate.setDefaultLang('vi');
+    translate.use('vi');
+  }
 
   ngOnInit(): void {
   }
-
+  useLanguage(language: string): void {
+    this.translate.use(language);
+}
 }

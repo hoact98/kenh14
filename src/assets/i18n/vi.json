@@ -1,0 +1,8 @@
+{
+    "demo": {
+        "title": "Bản dịch demo",
+        "text": "Đây là một ứng dụng trình diễn đơn giản cho ngx-dịch",
+        "greeting": "Xin chào {{name}}!",
+        "paragraph": "Hãy thử <strong> BabelEdit </strong>! Trình chỉnh sửa bản dịch này được tạo cho <strong> ngx-translate </strong>!"
+    }
+}

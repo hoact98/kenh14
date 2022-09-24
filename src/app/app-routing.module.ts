@@ -8,6 +8,7 @@ import { PostComponent } from './modules/post/post.component';
 import { CateComponent } from './modules/cate/cate.component';
 import { PostServiceGuard } from './post-service.guard';
 import { CateServiceGuard } from './cate-service.guard';
+import { SiteLayoutComponent } from './components/_layout/site-layout/site-layout.component';
 const routes: Routes = [
   {
     path : '',
@@ -19,7 +20,10 @@ const routes: Routes = [
       },
     ],
   },
-
+  {
+    path : '123',
+    component : SiteLayoutComponent,
+  },
   {
     path : ':id/:slug',
     component : SiteLayoutPostComponent,
