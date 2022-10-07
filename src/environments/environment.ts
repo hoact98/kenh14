@@ -1,7 +1,10 @@
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
-
+const apiServer = {
+    host: 'localhost:3000',
+    prefix: 'api/v1'
+};
 export const environment = {
   production: false,
   data :[
@@ -70,7 +73,37 @@ export const environment = {
       slug: 'xa-hoi.chn',
       name: 'Xã hội'
     },
-  ]
+  ],
+  apiServer: {
+    ssl: false,
+    host: apiServer.host,
+    prefix: apiServer.prefix,
+    paths: {
+      auth: {
+        login: '/login',
+        logout: '/logout',
+        register: '/register',
+      },
+      administrator: {
+        user: {
+          list: '/user/list',
+          create: '/user/create',
+          update: '/user/{id}'
+        },
+        post: {
+          list: '/post/list',
+          create: '/post/create',
+          update: '/post/{id}'
+        },
+        category: {
+          list: '/category/list',
+          create: '/category/create',
+          update: '/category/{id}'
+        }
+      },
+    }
+  }
+
 };
 
 /*

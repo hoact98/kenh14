@@ -1,6 +1,7 @@
+import { ActivatedRoute, ParamMap, Router, RouterModule } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+
 import {Title} from "@angular/platform-browser";
-import { Router, ActivatedRoute, ParamMap, RouterModule } from '@angular/router';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -16,9 +17,10 @@ export class PostContentComponent implements OnInit {
     title: any;
     content: any;
     voice: any;
-   ngOnInit(): void {
-      this.voice = false;
-     this.route.params.subscribe(params => {
+
+    ngOnInit(): void {
+    this.voice = false;
+    this.route.params.subscribe(params => {
       this.slug = params['slug'];
       // let regex = /\d+/g;
       let regex = /(\/[a-zA-Z0-9_\-.]+)*?\d+.chn{1}$/ig;
