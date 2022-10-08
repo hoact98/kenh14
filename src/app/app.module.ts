@@ -1,6 +1,7 @@
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 
+import { AdministratorSiteHeaderComponent } from './components/_layout/_administrator/site-header/site-header.component'
 import { AdministratorSiteLayoutComponent } from './components/_layout/_administrator/site-layout/site-layout.component'
 import { AdministratorSiteSideBarComponent } from './components/_layout/_administrator/site-sidebar/site-sidebar.component'
 import { AppComponent } from './app.component';
@@ -51,7 +52,8 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
     FeaturedCateComponent,
     SiteLayoutCateComponent,
     AdministratorSiteLayoutComponent,
-    AdministratorSiteSideBarComponent
+    AdministratorSiteSideBarComponent,
+    AdministratorSiteHeaderComponent
   ],
   imports: [
     BrowserModule,
