@@ -1,14 +1,17 @@
+import { RouterModule, Routes } from '@angular/router'; // CLI imports router
+
+import { AdministratorSiteLayoutComponent } from './components/_layout/_administrator/site-layout/site-layout.component';
+import { CateComponent } from './modules/cate/cate.component';
+import { CateServiceGuard } from './cate-service.guard';
+import { HomeComponent } from './modules/home/home.component';
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router'; // CLI imports router
+import { PostComponent } from './modules/post/post.component';
+import { PostServiceGuard } from './post-service.guard';
+import { SiteLayoutCateComponent } from './components/_layout/site-layout-cate/site-layout-cate.component';
+import { SiteLayoutComponent } from './components/_layout/site-layout/site-layout.component';
 import { SiteLayoutHomeComponent } from './components/_layout/site-layout-home/site-layout-home.component';
 import { SiteLayoutPostComponent } from './components/_layout/site-layout-post/site-layout-post.component';
-import { SiteLayoutCateComponent } from './components/_layout/site-layout-cate/site-layout-cate.component';
-import { HomeComponent } from './modules/home/home.component';
-import { PostComponent } from './modules/post/post.component';
-import { CateComponent } from './modules/cate/cate.component';
-import { PostServiceGuard } from './post-service.guard';
-import { CateServiceGuard } from './cate-service.guard';
-import { SiteLayoutComponent } from './components/_layout/site-layout/site-layout.component';
+
 const routes: Routes = [
   {
     path : '',
@@ -20,6 +23,19 @@ const routes: Routes = [
       },
     ],
   },
+   //administrator
+  {
+    path: 'administrator',
+    component: AdministratorSiteLayoutComponent,
+    children: [
+      {
+        path: '',
+        loadChildren: () => import('./modules/administrator/administrator.module').then(m => m.AdministratorModule),
+        data: { preload: false }
+      }
+    ]
+  },
+
   {
     path : '123',
     component : SiteLayoutComponent,

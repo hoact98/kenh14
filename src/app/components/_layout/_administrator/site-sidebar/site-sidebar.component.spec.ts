@@ -1,23 +1,23 @@
 /* tslint:disable:no-unused-variable */
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, async } from '@angular/core/testing';
+
+import { AdministratorSiteSideBarComponent } from './site-sidebar.component';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { SiteSidebarComponent } from './site-sidebar.component';
-
-describe('SiteSidebarComponent', () => {
-  let component: SiteSidebarComponent;
-  let fixture: ComponentFixture<SiteSidebarComponent>;
+describe('AdministratorSiteSideBarComponent', () => {
+  let component: AdministratorSiteSideBarComponent;
+  let fixture: ComponentFixture<AdministratorSiteSideBarComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SiteSidebarComponent ]
+      declarations: [ AdministratorSiteSideBarComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SiteSidebarComponent);
+    fixture = TestBed.createComponent(AdministratorSiteSideBarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

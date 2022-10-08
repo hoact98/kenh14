@@ -1,23 +1,23 @@
 /* tslint:disable:no-unused-variable */
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, async } from '@angular/core/testing';
+
+import { AdministratorSiteLayoutComponent } from './site-layout.component';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { SiteLayoutComponent } from './site-layout.component';
-
-describe('SiteLayoutComponent', () => {
-  let component: SiteLayoutComponent;
-  let fixture: ComponentFixture<SiteLayoutComponent>;
+describe('AdministratorSiteLayoutComponent', () => {
+  let component: AdministratorSiteLayoutComponent;
+  let fixture: ComponentFixture<AdministratorSiteLayoutComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SiteLayoutComponent ]
+      declarations: [ AdministratorSiteLayoutComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SiteLayoutComponent);
+    fixture = TestBed.createComponent(AdministratorSiteLayoutComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
