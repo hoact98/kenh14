@@ -80,9 +80,9 @@ export const environment = {
     prefix: apiServer.prefix,
     paths: {
       auth: {
-        login: '/login',
-        logout: '/logout',
-        register: '/register',
+        login: '/auth/login',
+        logout: '/auth/logout',
+        register: '/auth/register',
       },
       administrator: {
         user: {

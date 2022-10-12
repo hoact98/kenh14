@@ -23,6 +23,16 @@ const routes: Routes = [
       },
     ],
   },
+  {
+    path: '',
+    children: [
+      {
+        path: '',
+        loadChildren: () => import('./modules/auth/auth.module').then(m => m.AuthModule),
+        data: { preload: false}
+      }
+    ]
+  },
    //administrator
   {
     path: 'administrator',

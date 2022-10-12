@@ -1,5 +1,4 @@
 import {ApiResponse} from '../_models/api.response.model';
-import {Globals} from '../globals';
 import {HttpClient} from '@angular/common/http';
 import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs';
@@ -12,15 +11,10 @@ export class ApiService {
 
     protected apiServer = environment.apiServer;
 
-    constructor(private httpClient: HttpClient,
-                private globals: Globals) {
+    constructor(private httpClient: HttpClient) {
     }
 
     get(path: string, options: {}, callback: any): Observable<any> {
-        if (null !== this.globals.request) {
-            // console.log('abort previous request');
-            // this.globals.request.unsubscribe();
-        }
         return this.httpClient.get<ApiResponse>(this._buildUrl(path), options)
             .pipe(callback || '');
     }

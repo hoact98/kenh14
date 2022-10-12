@@ -1,3 +1,5 @@
+import { CategoryModel } from './category.model';
+
 export class PostModel{
     id: number;
     title: string
@@ -7,6 +9,7 @@ export class PostModel{
     categoryId: number
     createdAt: string
     updatedAt: string
+    category: CategoryModel
 
     constructor(data: any) {
         this.id = data.id || null;
@@ -17,5 +20,6 @@ export class PostModel{
         this.categoryId = data.categoryId || null;
         this.createdAt = data.createdAt || null;
         this.updatedAt = data.updatedAt || null;
+        this.category = data.category
     }
 }

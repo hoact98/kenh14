@@ -4,8 +4,10 @@ import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import { AdministratorSiteHeaderComponent } from './components/_layout/_administrator/site-header/site-header.component'
 import { AdministratorSiteLayoutComponent } from './components/_layout/_administrator/site-layout/site-layout.component'
 import { AdministratorSiteSideBarComponent } from './components/_layout/_administrator/site-sidebar/site-sidebar.component'
+import { AngularMaterialModule } from './angular-material.module'
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { CateComponent } from './modules/cate/cate.component';
 import { CateModule } from './modules/cate/cate.module';
@@ -58,6 +60,7 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AngularMaterialModule,
     // ngx-translate and the loader module
     HttpClientModule,
     TranslateModule.forRoot({
@@ -69,7 +72,8 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
     }),
     HomeModule,
     PostModule,
-    CateModule
+    CateModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
