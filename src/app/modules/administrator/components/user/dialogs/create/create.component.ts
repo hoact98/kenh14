@@ -3,6 +3,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from "@angular/forms"
 
 import { HttpErrorResponse } from '@angular/common/http';
 import { HttpHeaders } from '@angular/common/http';
+import { Router } from '@angular/router';
 import { UserService } from './../../../../services/user.service';
 
 @Component({
@@ -14,7 +15,7 @@ export class AdministratorUserDialogCreateComponent implements OnInit {
   userForm: FormGroup;
   errors:any;
 
-  constructor(private _formBuilder: FormBuilder, private userService: UserService) {
+  constructor(private _formBuilder: FormBuilder, private userService: UserService, private router: Router) {
     // this.userForm = this.createForm();
     this.userForm = this._formBuilder.group({
       name: ['', Validators.required],
@@ -55,7 +56,7 @@ export class AdministratorUserDialogCreateComponent implements OnInit {
       headers.append('Content-Type', 'application/x-www-form-urlencoded');
         this.userService.create(this.userForm.value).subscribe(data => {
       if(data.id != undefined){
-
+          this.router.navigate(['administrator/users'])
       }
     },
     (errorResponse: HttpErrorResponse) => {

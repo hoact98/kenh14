@@ -1,4 +1,4 @@
-import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClient, HttpClientModule} from '@angular/common/http';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 
 import { AdministratorSiteHeaderComponent } from './components/_layout/_administrator/site-header/site-header.component'
@@ -15,6 +15,7 @@ import { FeaturedCateComponent } from './modules/cate/components/featured-cate/f
 import { HomeComponent } from './modules/home/home.component';
 import { HomeModule } from './modules/home/home.module';
 import { HotDailyComponent } from './modules/post/components/hot-daily/hot-daily.component';
+import { JwtInterceptor } from './_helpers/jwt.interceptor';
 import { MenuCateComponent } from './modules/cate/components/menu-cate/menu-cate.component';
 import { NewStreamCateComponent } from './modules/cate/components/new-stream-cate/new-stream-cate.component';
 import { NgModule } from '@angular/core';
@@ -75,7 +76,9 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
     CateModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

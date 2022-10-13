@@ -33,6 +33,11 @@ loginForm: FormGroup;
       password: ['', [Validators.required, Validators.minLength(8), Validators.pattern(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/)]]
     });
     this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+
+    // redirect to home if already logged in
+        if (this.authenticationService.currentUserValue) {
+            this.router.navigate(['/']);
+        }
   }
 
   ngOnInit() {}

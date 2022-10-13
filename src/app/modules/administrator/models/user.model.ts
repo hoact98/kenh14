@@ -7,6 +7,7 @@ export class UserModel {
   createdAt: string
   updatedAt: string
   token: string
+  role: number
 
   constructor(data: any) {
     this.id = data.id || null;
@@ -16,5 +17,6 @@ export class UserModel {
     this.createdAt = data.createdAt || null;
     this.updatedAt = data.updatedAt || null;
     this.token = data.token || null;
+    this.role = data.role || null;
   }
 }

@@ -16,8 +16,8 @@
         <td>{{user.name}}</td>
         <td>{{user.email}}</td>
         <td>
-          <a href="" class="btn btn-outline-warning btn-sm me-2">Update</a>
-          <a href="" class="btn btn-outline-danger btn-sm">Remove</a>
+          <a routerLink="/administrator/users/update/{{user.id}}" class="btn btn-outline-warning btn-sm me-2">Update</a>
+          <button  class="btn btn-outline-danger btn-sm" (click)="delete(user.id)">Remove</button>
         </td>
       </tr>
     </tbody>

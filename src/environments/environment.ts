@@ -80,25 +80,27 @@ export const environment = {
     prefix: apiServer.prefix,
     paths: {
       auth: {
-        login: '/auth/login',
-        logout: '/auth/logout',
-        register: '/auth/register',
+        login: 'auth/login',
+        logout: 'auth/logout',
+        register: 'auth/register',
       },
       administrator: {
         user: {
-          list: '/user/list',
-          create: '/user/create',
-          update: '/user/{id}'
+          list: 'user/list',
+          create: 'user/create',
+          update: 'user/{id}',
+          show: 'user/{id}',
+          delete: 'user/{id}'
         },
         post: {
-          list: '/post/list',
-          create: '/post/create',
-          update: '/post/{id}'
+          list: 'post/list',
+          create: 'post/create',
+          update: 'post/{id}'
         },
         category: {
-          list: '/category/list',
-          create: '/category/create',
-          update: '/category/{id}'
+          list: 'category/list',
+          create: 'category/create',
+          update: 'category/{id}'
         }
       },
     }

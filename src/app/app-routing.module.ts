@@ -24,7 +24,7 @@ const routes: Routes = [
     ],
   },
   {
-    path: '',
+    path: 'auth',
     children: [
       {
         path: '',

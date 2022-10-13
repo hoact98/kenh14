@@ -6,6 +6,7 @@ import { AdministratorPostDialogCreateComponent } from './components/post/dialog
 import { AdministratorPostDialogUpdateComponent } from './components/post/dialogs/update/update.component';
 import { AdministratorUserDialogCreateComponent } from './components/user/dialogs/create/create.component';
 import { AdministratorUserDialogUpdateComponent } from './components/user/dialogs/update/update.component';
+import { AuthGuard } from 'src/app/_helpers/auth.guard';
 import { CategoryComponent } from './components/category/category.component';
 import { NgModule } from '@angular/core';
 import { PostComponent } from './components/post/post.component';
@@ -13,15 +14,60 @@ import { UserComponent } from './components/user/user.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
-  { path: 'users', component: UserComponent },
-  { path: 'posts', component: PostComponent },
-  { path: 'categories', component: CategoryComponent },
-  { path: 'users/create', component: AdministratorUserDialogCreateComponent },
-  { path: 'users/update/:id', component: AdministratorUserDialogUpdateComponent },
-  { path: 'posts/create', component: AdministratorPostDialogCreateComponent },
-  { path: 'posts/update/:id', component: AdministratorPostDialogUpdateComponent },
-  { path: 'categories/create', component: AdministratorCategoryDialogCreateComponent },
-  { path: 'categories/update/:id', component: AdministratorCategoryDialogUpdateComponent}
+  {
+    path: 'users',
+    component: UserComponent,
+    canActivate: [AuthGuard],
+    data: { roles: 1}
+  },
+  {
+    path: 'posts',
+    component: PostComponent,
+    canActivate: [AuthGuard],
+    data: {roles: 1}
+  },
+  {
+    path: 'categories',
+    component: CategoryComponent,
+    canActivate: [AuthGuard],
+    data: {roles: 1}
+  },
+  {
+    path: 'users/create',
+    component: AdministratorUserDialogCreateComponent,
+    canActivate: [AuthGuard],
+    data: {roles: 1}
+  },
+  {
+    path: 'users/update/:id',
+    component: AdministratorUserDialogUpdateComponent,
+    canActivate: [AuthGuard],
+    data: {roles: 1}
+  },
+  {
+    path: 'posts/create',
+    component: AdministratorPostDialogCreateComponent,
+    canActivate: [AuthGuard],
+    data: {roles: 1}
+  },
+  {
+    path: 'posts/update/:id',
+    component: AdministratorPostDialogUpdateComponent,
+    canActivate: [AuthGuard],
+    data: {roles: 1}
+  },
+  {
+    path: 'categories/create',
+    component: AdministratorCategoryDialogCreateComponent,
+    canActivate: [AuthGuard],
+    data: {roles: 1}
+  },
+  {
+    path: 'categories/update/:id',
+    component: AdministratorCategoryDialogUpdateComponent,
+    canActivate: [AuthGuard],
+    data: {roles: 1}
+  }
 ];
 
 @NgModule({

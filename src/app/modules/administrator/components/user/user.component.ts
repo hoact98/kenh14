@@ -24,4 +24,9 @@ export class UserComponent implements OnInit {
       this.users = result.data.length > 0 ? result.data : [];
     })
   }
+  delete(id: any) {
+    this.userService.remove(id).subscribe(result => {
+      this.getData()
+    })
+  }
 }

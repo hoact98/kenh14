@@ -46,11 +46,21 @@ export class UserService {
           password: user.password,
         };
         return this.apiService.post(this.apiServerPaths.administrator.user.create, options, map(response => {
-                console.log(response);
-            })
+              return response
+          })
         );
     }
-
+    show(id: any) {
+      const options = {
+        params: {},
+        headers: {Accept: 'application/json'}
+      }
+      let path = this.apiServerPaths.administrator.user.show
+      path = path.replace('{id}', id)
+      return this.apiService.get(path, options, map(response => {
+        return response
+      }))
+    }
     update(user: UserModel, newPassword = '', confirmPassword = '') {
         const options = {
           id: user.id,
@@ -58,9 +68,23 @@ export class UserService {
           new_password: newPassword,
           confirm_password: confirmPassword
         };
-        return this.apiService.post(this.apiServerPaths.administrator.user.update, options, map(response => {
-                console.log(response);
+      let path = this.apiServerPaths.administrator.user.update
+       // @ts-ignore
+        path = path.replace('{id}', user.id)
+        return this.apiService.post(path, options, map(response => {
+                return response
             })
         );
+    }
+    remove(id: any) {
+        const options = {
+            params: {},
+            headers: {Accept: 'application/json'}
+        }
+        let path = this.apiServerPaths.administrator.user.delete
+        path = path.replace('{id}', id)
+      return this.apiService.delete(path, options, map(response => {
+          return response
+      }))
     }
 }

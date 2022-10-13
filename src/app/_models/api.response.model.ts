@@ -1,5 +1,6 @@
 export class ApiResponse {
-    // status: number;
+   // @ts-ignore
+    status: number;
     message: any;
     data: any;
 }

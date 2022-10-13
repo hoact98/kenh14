@@ -1,3 +1,27 @@
-<p>
-  update works!
-</p>
+<div class="administrator-main">
+  <div class="container">
+    <div class="row">
+      <div class="col-4 offset-1">
+        <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+          <div class="form-group mt-3">
+            <label class="form-label" for="">Tên tài khoản</label>
+            <input type="text" formControlName="name" class="form-control">
+          </div>
+          <p *ngIf="f.name.invalid && (f.name.dirty || f.name.touched)" class="mt-2 text-danger">
+
+            <span *ngIf="f.name.errors?.required">
+              Bạn chưa nhập tên
+            </span>
+            <span *ngIf="f.name.errors?.minlength">
+              Ít nhất 4 ký tự
+            </span>
+          </p>
+
+          <div class="mt-3">
+            <button [disabled]="userForm.invalid" type="submit" class="btn btn-primary">Update</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
