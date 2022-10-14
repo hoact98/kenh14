@@ -7,8 +7,37 @@
     },
     "auth": {
       "common":{
+        "username": "Username",
+        "fullName": "Full name",
+        "remember": "Remember login?",
+        "forgetPassword": "Forgot password",
         "login": "Login",
-        "register": "Register"
+        "register": "Register",
+        "credentials": "Your credential",
+        "email": "Email",
+        "password": "Password",
+        "passwordConfirm": "Confirm password",
+        "notRegister": "Don't have an account?",
+        "registered": "You have an account!",
+        "signUp": "Sign up",
+        "policyWarning": "By continuing, you're confirming that you've read our Terms & Conditions and Cookie Policy",
+        "signOut": "Logout",
+        "accountSettings": "Account settings",
+        "invalidCredential": "Login failed! Wrong email or password!",
+        "adduser": "Add user",
+        "listusers": "List users",
+        "edituser": "Edit information",
+        "updateuser": "Update information",
+        "fullNameRequired": "Fullname is not required",
+        "usernameRequired": "Username is not required",
+        "emailRequired": "Email is not required",
+        "emailNotType": "It's not Email",
+        "passwordRequired": "Password is not required",
+        "passwordMinLength": "Password have min length is 8",
+        "passwordRegex": "Password requires 1 lowercase character, 1 uppercase character, 1 number and 1 special character ",
+        "passwordConfirmRequired": "Confirm Password is not required",
+        "passwordConfirmNotMatch": "Confirm Password not match Password",
+        "lastLogin": "Last Login"
       }
     }
 }

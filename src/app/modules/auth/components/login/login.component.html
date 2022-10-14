@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-sm-4">
-        <h1 class="mb-2 text-center">Login</h1>
+        <h1 class="mb-2 text-center">{{'auth.common.login' | translate}}</h1>
         <div [ngClass]="['alert alert-danger alert-dismissible fade', errors.length > 0 && 'show']" role="alert"
           *ngIf="errors.length > 0">
           <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:">
@@ -14,46 +14,45 @@
         <!-- Login form -->
         <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
           <div class="form-group mt-3">
-            <label for="email">Email</label>
+            <label for="email">{{'auth.common.email' | translate}}</label>
             <input type="email" formControlName="email" class="form-control" id="email"
               [ngClass]="{ 'is-invalid': (f.email.dirty || f.email.touched) && f.email.errors }" />
 
             <p *ngIf="f.email.invalid && (f.email.dirty || f.email.touched)" class="mt-2 invalid-feedback">
               <span *ngIf="f.email.errors?.required">
-                Bạn chưa nhập email
+                {{'auth.common.emailRequired' | translate}}
               </span>
               <span *ngIf="f.email.errors?.email">
-                Email không hợp lệ
+                {{'auth.common.emailNotType' | translate}}
               </span>
             </p>
           </div>
           <div class="form-group mt-3">
-            <label for="password">Password</label>
+            <label for="password">{{'auth.common.password' | translate}}</label>
             <input type="password" formControlName="password" class="form-control" id="password"
               [ngClass]="{ 'is-invalid': (f.password.dirty || f.password.touched) && f.password.errors }" />
             <p *ngIf="f.password.invalid && (f.password.dirty || f.password.touched)" class="mt-2 invalid-feedback">
 
               <span *ngIf="f.password.errors?.required">
-                Bạn chưa nhập mật khẩu
+                {{'auth.common.passwordRequired' | translate}}
               </span>
               <span *ngIf="f.password.errors?.minlength">
-                Ít nhất 8 ký tự
+                {{'auth.common.passwordMinLength' | translate}}
               </span>
               <span *ngIf="f.password.errors?.pattern">
-                Mật khẩu chứa ít nhất 1 chữ thường, 1 chữ in hoa, 1 ký tự số và 1 ký tự đặc biệt
+                {{'auth.common.passwordRegex' | translate}}
               </span>
             </p>
           </div>
           <div class="form-group mt-3">
             <button [disabled]="loginForm.invalid" class="btn btn-primary" type="submit">
               <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
-              <span>Login</span>
+              <span>{{'auth.common.login' | translate}}</span>
             </button>
-            <a routerLink="/auth/register" class="btn btn-link">Register</a>
+            <a routerLink="/auth/register" class="btn btn-link">{{'auth.common.register' | translate}}</a>
           </div>
         </form>
       </div>
-
     </div>
   </div>
 </div>

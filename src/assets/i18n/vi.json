@@ -7,8 +7,38 @@
     },
     "auth": {
       "common": {
+        "username": "Tên đăng nhập",
+        "fullName": "Họ và tên",
+        "remember": "Ghi nhớ đăng nhập?",
+        "forgetPassword": "Quên mật khẩu",
         "login": "Đăng nhập",
-        "register": "Đăng ký"
+        "register": "Đăng ký",
+        "credentials": "Thông tin đăng nhập của bạn",
+        "email": "Email",
+        "password": "Mật khẩu",
+        "passwordConfirm": "Xác nhận mật khẩu",
+        "notRegister": "Bạn chưa có tài khoản?",
+        "registered": "Bạn có tài khoản!",
+        "signUp": "Tạo tài khoản",
+        "policyWarning": "By continuing, you're confirming that you've read our Terms & Conditions and Cookie Policy",
+        "signOut": "Đăng xuất",
+        "accountSettings": "Account settings",
+        "invalidCredential": "Đăng nhập thất bại! Sai tên đăng nhập hoặc mật khẩu!",
+        "adduser": "Add user",
+        "listusers": "List users",
+        "edituser": "Edit information",
+        "updateuser": "Update information",
+        "fullNameRequired": "Fullname không được để trống",
+        "usernameRequired": "Username không được để trống",
+        "emailRequired": "Email không được để trống",
+        "emailNotType": "Không đúng định dạng Email",
+        "passwordRequired": "Mật khẩu không được để trống",
+        "passwordMinLength": "Mật khẩu có độ dài tối thiểu là 8",
+        "passwordRegex": "Mật khẩu cần có 1 kí tự viết thường, 1 kí tự viết hoa, 1 số và 1 kí tự đặc biệt",
+        "passwordConfirmRequired": "Xác nhận mật khẩu không được để trống",
+        "passwordConfirmNotMatch": "Xác nhận mật khẩu không đúng",
+        "recaptchaRequired": "Mã captcha không được để trống",
+        "lastLogin": "Đăng nhập lần cuối"
       }
     }
 }
