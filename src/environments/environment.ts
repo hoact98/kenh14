@@ -95,12 +95,16 @@ export const environment = {
         post: {
           list: 'post/list',
           create: 'post/create',
-          update: 'post/{id}'
+          update: 'post/{id}',
+          show: 'post/{id}',
+          delete: 'post/{id}'
         },
         category: {
           list: 'category/list',
           create: 'category/create',
-          update: 'category/{id}'
+          update: 'category/{id}',
+          show: 'category/{id}',
+          delete: 'category/{id}'
         }
       },
     }

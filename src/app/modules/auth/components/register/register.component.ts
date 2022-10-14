@@ -29,7 +29,10 @@ export class AuthRegisterComponent implements OnInit {
     this.registerForm = this.formBuilder.group({
           name: ['', [Validators.required, Validators.minLength(3)]],
           email: ['', [Validators.required, Validators.email]],
-          password: ['', [Validators.required, Validators.minLength(8), Validators.minLength(8), Validators.pattern(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/)]]
+      password: ['', [
+        Validators.required,
+        Validators.minLength(8),
+        Validators.pattern(/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/)]]
       });
   }
 

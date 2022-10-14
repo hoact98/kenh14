@@ -61,9 +61,24 @@ export class PostService {
       categoryId: post.categoryId,
       image: post.image
     }
-    return this.apiService.post(this.apiServerPaths.administrator.post.update, options, map(response => {
-          console.log(response);
-      })
+    let path = this.apiServerPaths.administrator.post.update
+    //@ts-ignore
+    path = path.replace('{id}', post.id)
+    return this.apiService.put(path, options, map(response => {
+      console.log(response);
+      return response
+    })
     );
   }
+  remove(id: any) {
+        const options = {
+            params: {},
+            headers: {Accept: 'application/json'}
+        }
+        let path = this.apiServerPaths.administrator.post.delete
+        path = path.replace('{id}', id)
+      return this.apiService.delete(path, options, map(response => {
+          return response
+      }))
+    }
 }

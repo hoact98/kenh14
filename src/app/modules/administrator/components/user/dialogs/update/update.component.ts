@@ -64,8 +64,8 @@ export class AdministratorUserDialogUpdateComponent implements OnInit {
       const headers = new HttpHeaders();
       headers.append('Accept', 'application/json');
       headers.append('Content-Type', 'application/x-www-form-urlencoded');
-      this.userService.update(this.userForm.value).subscribe(data => {
-        if(data.id != undefined){
+    this.userService.update(this.userForm.value).subscribe(data => {
+        if(data.data != undefined){
             this.router.navigate(['administrator/users'])
         }
       },

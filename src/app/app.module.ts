@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { CateComponent } from './modules/cate/cate.component';
 import { CateModule } from './modules/cate/cate.module';
+import { ErrorInterceptor } from './_helpers/error.interceptor';
 import { FeaturedCateComponent } from './modules/cate/components/featured-cate/featured-cate.component';
 import { HomeComponent } from './modules/home/home.component';
 import { HomeModule } from './modules/home/home.module';
@@ -78,6 +79,7 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })

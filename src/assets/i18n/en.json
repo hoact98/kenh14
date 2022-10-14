@@ -4,5 +4,11 @@
         "text": "This is a simple demonstration app for ngx-translate",
         "greeting": "Hello {{name}}!",
         "paragraph": "Try <strong>BabelEdit</strong>! This translation editor is made for <strong>ngx-translate</strong>!"
+    },
+    "auth": {
+      "common":{
+        "login": "Login",
+        "register": "Register"
+      }
     }
 }

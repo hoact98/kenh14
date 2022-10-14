@@ -7,6 +7,7 @@ import { HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 
 import { AuthenticationService } from 'src/app/_services/authentication.service';
 import { Title } from '@angular/platform-browser';
+import { TranslateService } from '@ngx-translate/core';
 import { first } from 'rxjs/operators';
 
 @Component({
@@ -19,18 +20,26 @@ loginForm: FormGroup;
     loading = false;
     submitted = false;
     returnUrl: string;
-    errors: any;
+    errors: any = [];
   constructor(private titleService: Title,
         private formBuilder: FormBuilder,
         private route: ActivatedRoute,
         private router: Router,
         private authenticationService: AuthenticationService,
+        private translate: TranslateService
   ) {
+     // language
+    translate.setDefaultLang('vi');
+    translate.use('vi')
+
     this.titleService.setTitle('Login page');
 
     this.loginForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(8), Validators.pattern(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/)]]
+      password: ['', [
+        Validators.required,
+        Validators.minLength(8),
+        Validators.pattern(/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/)]]
     });
     this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
 
@@ -57,18 +66,23 @@ loginForm: FormGroup;
       headers.append('Accept', 'application/json');
       headers.append('Content-Type', 'application/x-www-form-urlencoded');
         this.authenticationService.login(this.f.email.value, this.f.password.value)
-            .pipe(first())
+            // .pipe(first())
             .subscribe(
               data => {
                   this.loading = false
                   this.router.navigate([this.returnUrl]);
-              },
-      (errorResponse: HttpErrorResponse) => {
+            },(errorResponse: HttpErrorResponse) => {
                 this.errors = errorResponse.error.errors;
-                console.log('errors:  ', this.errors)
-                console.log('msg: ', this.errors[0].msg)
-
+                console.log(first)
+                var result= [];
+                for (let index = 0; index < this.errors.length; index++) {
+                  result.push(this.errors[index].msg);
+                }
+                this.errors = result
                 this.loading = false
             });
-    }
+  }
+  useLanguage(language: string): void {
+    this.translate.use(language);
+  }
 }

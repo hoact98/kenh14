@@ -1,4 +1,8 @@
+import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+import { CategoryService } from './../../../../services/category.service';
 
 @Component({
   selector: 'app-administrator-category-dialog-update',
@@ -6,10 +10,34 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./update.component.scss']
 })
 export class AdministratorCategoryDialogUpdateComponent implements OnInit {
+  categoryForm: FormGroup
+  errors: any
+  categoryId: Number = -1
 
-  constructor() { }
+  constructor(
+    private _formBuilder: FormBuilder,
+    private categoryService: CategoryService,
+    private router: Router,
+    private route: ActivatedRoute) {
+    this.categoryForm = this._formBuilder.group({
+      id: ['', Validators.required],
+      name: ['', [Validators.required, Validators.minLength(3)]]
+    })
+  }
 
-  ngOnInit() {
+  async ngOnInit() {
+    await this.route.params.subscribe(params => {
+      this.categoryId = params.id;
+    });
+    await this.categoryService.show(this.categoryId).subscribe(data => {
+      let result = data.data
+      this.categoryForm.setValue(
+        {
+          id: result.id,
+          name: result.name,
+        }
+      )
+    })
   }
 
 }

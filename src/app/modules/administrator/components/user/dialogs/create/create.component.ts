@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from "@angular/forms";
+import { HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 
-import { HttpErrorResponse } from '@angular/common/http';
-import { HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { UserService } from './../../../../services/user.service';
 
@@ -24,7 +23,7 @@ export class AdministratorUserDialogCreateComponent implements OnInit {
           [
               Validators.required,
               Validators.minLength(8),
-              Validators.pattern(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/)
+              Validators.pattern(/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/)
           ]
       ],
     });
@@ -55,12 +54,11 @@ export class AdministratorUserDialogCreateComponent implements OnInit {
       headers.append('Accept', 'application/json');
       headers.append('Content-Type', 'application/x-www-form-urlencoded');
         this.userService.create(this.userForm.value).subscribe(data => {
-      if(data.id != undefined){
-          this.router.navigate(['administrator/users'])
-      }
-    },
-    (errorResponse: HttpErrorResponse) => {
-      this.errors=errorResponse.error.errors;
-    },)
+          if(data.id != undefined){
+              this.router.navigate(['administrator/users'])
+          }
+        },(errorResponse: HttpErrorResponse) => {
+          this.errors=errorResponse.error.errors;
+        },)
     }
 }

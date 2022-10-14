@@ -61,17 +61,15 @@ export class UserService {
         return response
       }))
     }
-    update(user: UserModel, newPassword = '', confirmPassword = '') {
+    update(user: UserModel) {
         const options = {
           id: user.id,
           name: user.name,
-          new_password: newPassword,
-          confirm_password: confirmPassword
         };
       let path = this.apiServerPaths.administrator.user.update
        // @ts-ignore
         path = path.replace('{id}', user.id)
-        return this.apiService.post(path, options, map(response => {
+        return this.apiService.put(path, options, map(response => {
                 return response
             })
         );

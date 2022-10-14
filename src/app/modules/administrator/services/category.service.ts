@@ -48,14 +48,40 @@ protected apiServerPaths = environment.apiServer.paths;
       })
     );
   }
+  show(id: any) {
+    const options = {
+        params: {},
+        headers: {Accept: 'application/json'}
+      }
+      let path = this.apiServerPaths.administrator.category.show
+      path = path.replace('{id}', id)
+      return this.apiService.get(path, options, map(response => {
+        return response
+      }))
+  }
   update(category: CategoryModel) {
     const options = {
       id: category.id,
       name: category.name
     }
-    return this.apiService.post(this.apiServerPaths.administrator.category.update, options, map(response => {
-          console.log(response);
+    let path = this.apiServerPaths.administrator.category.update
+      // @ts-ignore
+    path = path.replace('{id}', category.id)
+    return this.apiService.put(path, options, map(response => {
+      console.log(response);
+      return response;
       })
     );
   }
+  remove(id: any) {
+        const options = {
+            params: {},
+            headers: {Accept: 'application/json'}
+        }
+        let path = this.apiServerPaths.administrator.category.delete
+        path = path.replace('{id}', id)
+      return this.apiService.delete(path, options, map(response => {
+          return response
+      }))
+    }
 }
