@@ -5,6 +5,12 @@
         "greeting": "Hello {{name}}!",
         "paragraph": "Try <strong>BabelEdit</strong>! This translation editor is made for <strong>ngx-translate</strong>!"
     },
+    "common": {
+      "language": {
+        "en": "English",
+        "vi": "Vietnamese"
+      }
+    },
     "auth": {
       "common":{
         "username": "Username",

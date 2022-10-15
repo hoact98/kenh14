@@ -1,4 +1,11 @@
-.administrator-main{
+.administrator-main {
   background-color: #fff;
   padding: 30px 20px;
+}
+.dropdown-menu {
+  padding: 0;
+
+  .dropdown-item{
+    cursor: pointer;
+  }
 }

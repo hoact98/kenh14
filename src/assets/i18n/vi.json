@@ -5,6 +5,12 @@
         "greeting": "Xin chào {{name}}!",
         "paragraph": "Hãy thử <strong> BabelEdit </strong>! Trình chỉnh sửa bản dịch này được tạo cho <strong> ngx-translate </strong>!"
     },
+    "common": {
+      "language": {
+        "en": "Tiếng Anh",
+        "vi": "Tiếng Việt"
+      }
+    },
     "auth": {
       "common": {
         "username": "Tên đăng nhập",

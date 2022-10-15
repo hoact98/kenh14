@@ -20,7 +20,9 @@ loginForm: FormGroup;
     loading = false;
     submitted = false;
     returnUrl: string;
-    errors: any = [];
+    errors: any = {};
+    result: any = [];
+    language: string = 'vi';
   constructor(private titleService: Title,
         private formBuilder: FormBuilder,
         private route: ActivatedRoute,
@@ -54,35 +56,35 @@ loginForm: FormGroup;
     get f() { return this.loginForm.controls; }
 
   onSubmit() {
-        this.submitted = true;
+      this.submitted = true;
 
-        // stop here if form is invalid
-        if (this.loginForm.invalid) {
-            return;
-        }
+      // stop here if form is invalid
+      if (this.loginForm.invalid) {
+          return;
+      }
 
-      this.loading = true;
-      const headers = new HttpHeaders();
-      headers.append('Accept', 'application/json');
-      headers.append('Content-Type', 'application/x-www-form-urlencoded');
-        this.authenticationService.login(this.f.email.value, this.f.password.value)
-            // .pipe(first())
-            .subscribe(
-              data => {
-                  this.loading = false
-                  this.router.navigate([this.returnUrl]);
-            },(errorResponse: HttpErrorResponse) => {
-                this.errors = errorResponse.error.errors;
-                console.log(first)
-                var result= [];
-                for (let index = 0; index < this.errors.length; index++) {
-                  result.push(this.errors[index].msg);
-                }
-                this.errors = result
-                this.loading = false
-            });
+    this.loading = true;
+    const headers = new HttpHeaders();
+    headers.append('Accept', 'application/json');
+    headers.append('Content-Type', 'application/x-www-form-urlencoded');
+      this.authenticationService.login(this.f.email.value, this.f.password.value)
+          // .pipe(first())
+        .subscribe(data => {
+              this.loading = false
+              this.router.navigate([this.returnUrl]);
+        },(errorResponse: HttpErrorResponse) => {
+            this.errors = errorResponse.error.errors;
+            var data= [];
+            for (let index = 0; index < this.errors.length; index++) {
+              data[this.errors[index].param] = this.errors[index].msg
+              this.result.push(this.errors[index].msg)
+            }
+            this.errors = data
+            this.loading = false
+        });
   }
   useLanguage(language: string): void {
     this.translate.use(language);
+    this.language = language;
   }
 }
