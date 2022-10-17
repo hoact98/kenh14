@@ -5,7 +5,7 @@
         <th>STT</th>
         <th>ID</th>
         <th>NAME</th>
-        <th><a routerLink="/administrator/categories/create" class="btn btn-sm btn-outline-info">Create</a></th>
+        <th><a routerLink="/administrator/categories/create" class="btn btn-sm btn-info">Create</a></th>
       </tr>
     </thead>
     <tbody>
@@ -14,8 +14,8 @@
         <td>{{category.id}}</td>
         <td>{{category.name}}</td>
         <td>
-          <a href="" class="btn btn-outline-warning btn-sm me-2">Update</a>
-          <a href="" class="btn btn-outline-danger btn-sm">Remove</a>
+          <a routerLink="/administrator/categories/update/{{category.id}}" class="btn btn-warning btn-sm me-2">Update</a>
+          <a class="btn btn-danger btn-sm" (click)="delete(category.id)">Remove</a>
         </td>
       </tr>
     </tbody>

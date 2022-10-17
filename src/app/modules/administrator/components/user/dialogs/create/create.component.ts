@@ -13,6 +13,7 @@ import { UserService } from './../../../../services/user.service';
 export class AdministratorUserDialogCreateComponent implements OnInit {
   userForm: FormGroup;
   errors:any;
+  loading = false;
 
   constructor(private _formBuilder: FormBuilder, private userService: UserService, private router: Router) {
     // this.userForm = this.createForm();
@@ -47,18 +48,17 @@ export class AdministratorUserDialogCreateComponent implements OnInit {
   get f() { return this.userForm.controls; }
 
   onSubmit() {
-        if (this.userForm.invalid) {
-            return;
-        }
-      const headers = new HttpHeaders();
-      headers.append('Accept', 'application/json');
-      headers.append('Content-Type', 'application/x-www-form-urlencoded');
-        this.userService.create(this.userForm.value).subscribe(data => {
-          if(data.id != undefined){
-              this.router.navigate(['administrator/users'])
-          }
-        },(errorResponse: HttpErrorResponse) => {
-          this.errors=errorResponse.error.errors;
-        },)
+    if (this.userForm.invalid) {
+        return;
     }
+    this.loading = true
+    this.userService.create(this.userForm.value).subscribe(data => {
+        this.loading = false
+        if(data.id != undefined){
+            this.router.navigate(['administrator/users'])
+        }
+      },(errorResponse: HttpErrorResponse) => {
+        this.errors=errorResponse.error.errors;
+      },)
+  }
 }

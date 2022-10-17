@@ -73,7 +73,8 @@ loginForm: FormGroup;
               this.loading = false
               this.router.navigate([this.returnUrl]);
         },(errorResponse: HttpErrorResponse) => {
-            this.errors = errorResponse.error.errors;
+          this.errors = errorResponse.error.errors;
+            this.result = []
             var data= [];
             for (let index = 0; index < this.errors.length; index++) {
               data[this.errors[index].param] = this.errors[index].msg

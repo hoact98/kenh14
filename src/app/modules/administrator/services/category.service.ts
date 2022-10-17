@@ -44,7 +44,8 @@ protected apiServerPaths = environment.apiServer.paths;
       name: category.name
     };
     return this.apiService.post(this.apiServerPaths.administrator.category.create, options, map(response => {
-          console.log(response);
+      console.log(response);
+      return response
       })
     );
   }

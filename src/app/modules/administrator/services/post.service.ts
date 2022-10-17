@@ -39,32 +39,29 @@ export class PostService {
         })
     );
   }
-  create(post: PostModel) {
-    const options = {
-      title: post.title,
-      description: post.description,
-      shortDesc: post.shortDesc,
-      categoryId: post.categoryId,
-      image: post.image
-    }
-    return this.apiService.post(this.apiServerPaths.administrator.post.create, options, map(response => {
-          console.log(response);
+  create(post: any) {
+    return this.apiService.post(this.apiServerPaths.administrator.post.create, post, map(response => {
+      return response
       })
     );
   }
-  update(post: PostModel) {
-    const options = {
-      id: post.id,
-      title: post.title,
-      description: post.description,
-      shortDesc: post.shortDesc,
-      categoryId: post.categoryId,
-      image: post.image
+  show(id: any) {
+      const options = {
+        params: {},
+        headers: {Accept: 'application/json'}
+      }
+      let path = this.apiServerPaths.administrator.post.show
+      path = path.replace('{id}', id)
+      return this.apiService.get(path, options, map(response => {
+        return response
+      }))
     }
+  update(post: any) {
+
     let path = this.apiServerPaths.administrator.post.update
     //@ts-ignore
-    path = path.replace('{id}', post.id)
-    return this.apiService.put(path, options, map(response => {
+    path = path.replace('{id}', post.get('id'))
+    return this.apiService.put(path, post, map(response => {
       console.log(response);
       return response
     })

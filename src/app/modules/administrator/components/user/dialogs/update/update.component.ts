@@ -15,7 +15,7 @@ export class AdministratorUserDialogUpdateComponent implements OnInit {
   userForm: FormGroup;
   errors: any;
   userId: Number = -1;
-
+  loading = false;
   constructor(
     private _formBuilder: FormBuilder,
     private userService: UserService,
@@ -58,18 +58,16 @@ export class AdministratorUserDialogUpdateComponent implements OnInit {
   get f() { return this.userForm.controls; }
 
   onSubmit() {
-      if (this.userForm.invalid) {
-          return;
-      }
-      const headers = new HttpHeaders();
-      headers.append('Accept', 'application/json');
-      headers.append('Content-Type', 'application/x-www-form-urlencoded');
+    if (this.userForm.invalid) {
+        return;
+    }
+    this.loading = true
     this.userService.update(this.userForm.value).subscribe(data => {
-        if(data.data != undefined){
-            this.router.navigate(['administrator/users'])
-        }
-      },
-    (errorResponse: HttpErrorResponse) => {
+      this.loading = false
+      if(data.data != undefined){
+          this.router.navigate(['administrator/users'])
+      }
+      },(errorResponse: HttpErrorResponse) => {
         this.errors=errorResponse.error.errors;
       },)
   }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { PostModel } from '../../models/post.model';
 import { PostService } from './../../services/post.service';
+import {environment} from './../../../../../environments/environment'
 
 @Component({
   selector: 'app-post',
@@ -10,6 +11,8 @@ import { PostService } from './../../services/post.service';
 })
 export class PostComponent implements OnInit {
   posts: PostModel[];
+  path = 'http://'+ environment.apiServer.host;
+
   constructor(private postService: PostService) {
     this.posts = [];
   }
@@ -21,6 +24,11 @@ export class PostComponent implements OnInit {
   getData() {
     this.postService.get().subscribe(result => {
       this.posts = result.data.length > 0 ? result.data : [];
+    })
+  }
+  delete(id: any) {
+    this.postService.remove(id).subscribe(result => {
+      this.getData()
     })
   }
 }

@@ -24,4 +24,9 @@ export class CategoryComponent implements OnInit {
       this.categories = result.data.length > 0 ? result.data : [];
     })
   }
+  delete(id: any) {
+    this.categoryService.remove(id).subscribe(result => {
+      this.getData()
+    })
+  }
 }

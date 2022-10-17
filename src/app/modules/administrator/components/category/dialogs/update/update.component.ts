@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { CategoryService } from './../../../../services/category.service';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-administrator-category-dialog-update',
@@ -13,6 +14,7 @@ export class AdministratorCategoryDialogUpdateComponent implements OnInit {
   categoryForm: FormGroup
   errors: any
   categoryId: Number = -1
+  loading = false;
 
   constructor(
     private _formBuilder: FormBuilder,
@@ -39,5 +41,20 @@ export class AdministratorCategoryDialogUpdateComponent implements OnInit {
       )
     })
   }
+  get f() { return this.categoryForm.controls }
 
+  onSubmit() {
+    if (this.categoryForm.invalid) {
+        return;
+    }
+    this.loading = true
+    this.categoryService.update(this.categoryForm.value).subscribe(data => {
+      this.loading = false
+        if(data != undefined){
+            this.router.navigate(['administrator/categories'])
+        }
+      },(errorResponse: HttpErrorResponse) => {
+        this.errors=errorResponse.error.errors;
+      },)
+    }
 }
