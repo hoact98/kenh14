@@ -3,11 +3,14 @@
     <thead>
       <tr>
         <th>STT</th>
-        <th>ID</th>
-        <th>Title</th>
-        <th>Image</th>
-        <th>Category</th>
-        <th><a routerLink="/administrator/posts/create" class="btn btn-sm btn-info">Create</a></th>
+        <th>{{'administrator.post.common.id' | translate}}</th>
+        <th>{{'administrator.post.common.name' | translate}}</th>
+        <th>{{'administrator.post.common.image' | translate}}</th>
+        <th>{{'administrator.post.common.category' | translate}}</th>
+        <th>
+          <a routerLink="/administrator/posts/create"
+            class="btn btn-sm btn-info">{{'administrator.post.common.createPost' | translate}}</a>
+        </th>
       </tr>
     </thead>
     <tbody>
@@ -18,8 +21,10 @@
         <td><img [src]="path+'/'+post.image" alt="" width="50"></td>
         <td>{{post.category.name}}</td>
         <td>
-          <a routerLink="/administrator/posts/update/{{post.id}}" class="btn btn-warning btn-sm me-2">Update</a>
-          <a class="btn btn-danger btn-sm" (click)="delete(post.id)">Remove</a>
+          <a routerLink="/administrator/posts/update/{{post.id}}"
+            class="btn btn-warning btn-sm me-2">{{'administrator.common.button.update' | translate}}</a>
+          <a class="btn btn-danger btn-sm" (click)="delete(post.id)">{{'administrator.common.button.remove' |
+            translate}}</a>
         </td>
       </tr>
     </tbody>

@@ -3,9 +3,11 @@
     <thead>
       <tr>
         <th>STT</th>
-        <th>ID</th>
-        <th>NAME</th>
-        <th><a routerLink="/administrator/categories/create" class="btn btn-sm btn-info">Create</a></th>
+        <th>{{'administrator.category.common.id' | translate}}</th>
+        <th>{{'administrator.category.common.name' | translate}}</th>
+        <th>
+          <a routerLink="/administrator/categories/create" class="btn btn-sm btn-info">{{'administrator.category.common.createCategory' | translate}}</a>
+        </th>
       </tr>
     </thead>
     <tbody>
@@ -14,8 +16,9 @@
         <td>{{category.id}}</td>
         <td>{{category.name}}</td>
         <td>
-          <a routerLink="/administrator/categories/update/{{category.id}}" class="btn btn-warning btn-sm me-2">Update</a>
-          <a class="btn btn-danger btn-sm" (click)="delete(category.id)">Remove</a>
+          <a routerLink="/administrator/categories/update/{{category.id}}"
+          class="btn btn-warning btn-sm me-2">{{'administrator.common.button.update' | translate}}</a>
+          <a class="btn btn-danger btn-sm" (click)="delete(category.id)">{{'administrator.common.button.remove' | translate}}</a>
         </td>
       </tr>
     </tbody>

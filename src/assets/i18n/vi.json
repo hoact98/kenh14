@@ -46,5 +46,64 @@
         "recaptchaRequired": "Mã captcha không được để trống",
         "lastLogin": "Đăng nhập lần cuối"
       }
+    },
+    "administrator": {
+      "common": {
+        "title": "Quản trị",
+        "button": {
+          "save": "Lưu lại",
+          "cancel": "Đóng lại",
+          "update": "Cập nhật",
+          "remove": "Xoá",
+          "create": "Tạo mới"
+        }
+      },
+      "user": {
+        "common": {
+          "title": "Quản lý người dùng",
+          "id": "Id",
+          "name": "Tên",
+          "username": "Username",
+          "email": "Email",
+          "mobileNumber": "Mobile",
+          "fullName": "Họ và tên",
+          "role": "Nhóm",
+          "status": "Trạng thái",
+          "newPassword": "Mật khẩu",
+          "newPasswordConfirm": "Xác nhận mật khẩu",
+          "createUser": "Tạo người dùng",
+          "createNewUser": "Tạo mới người dùng",
+          "userInfo": "Thông tin người dùng",
+          "generatePassword": "Tạo mật khẩu",
+          "lastLogin": "Đăng nhập lần cuối"
+        }
+      },
+      "category": {
+        "common": {
+          "title": "Quản lý danh mục",
+          "id": "Id",
+          "name": "Tên danh mục",
+          "status": "Trạng thái",
+          "createCategory": "Tạo danh mục",
+          "createNewCategory": "Tạo mới danh mục",
+          "categoryInfo": "Thông tin danh mục"
+        }
+      },
+      "post": {
+        "common": {
+          "title": "Quản lý bài viết",
+          "id": "Id",
+          "name": "Tiêu đề",
+          "categoryId": "Mã danh mục",
+          "description": "Nội dung bài viết",
+          "shortDesc": "Mô tả ngắn bài viết",
+          "image": "Ảnh bài viết",
+          "category": "Tên danh mục",
+          "status": "Trạng thái",
+          "createPost": "Tạo bài viết",
+          "createNewPost": "Tạo mới bài viết",
+          "postInfo": "Thông tin bài viết"
+        }
+      }
     }
 }

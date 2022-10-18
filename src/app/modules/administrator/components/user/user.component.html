@@ -3,10 +3,12 @@
     <thead>
       <tr>
         <th>STT</th>
-        <th>ID</th>
-        <th>NAME</th>
-        <th>EMAIL</th>
-        <th><a routerLink="/administrator/users/create" class="btn btn-info btn-sm">Create</a></th>
+        <th>{{'administrator.user.common.id' | translate}}</th>
+        <th>{{'administrator.user.common.name' | translate}}</th>
+        <th>{{'administrator.user.common.email' | translate}}</th>
+        <th>
+          <a routerLink="/administrator/users/create" class="btn btn-info btn-sm">{{'administrator.user.common.createUser' | translate}}</a>
+        </th>
       </tr>
     </thead>
     <tbody>
@@ -16,8 +18,8 @@
         <td>{{user.name}}</td>
         <td>{{user.email}}</td>
         <td>
-          <a routerLink="/administrator/users/update/{{user.id}}" class="btn btn-warning btn-sm me-2">Update</a>
-          <button  class="btn btn-danger btn-sm" (click)="delete(user.id)">Remove</button>
+          <a routerLink="/administrator/users/update/{{user.id}}" class="btn btn-warning btn-sm me-2">{{'administrator.common.button.update' | translate}}</a>
+          <button  class="btn btn-danger btn-sm" (click)="delete(user.id)">{{'administrator.common.button.remove' | translate}}</button>
         </td>
       </tr>
     </tbody>

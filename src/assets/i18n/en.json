@@ -45,5 +45,63 @@
         "passwordConfirmNotMatch": "Confirm Password not match Password",
         "lastLogin": "Last Login"
       }
+    },
+    "administrator": {
+      "common": {
+        "title": "Administrator",
+        "button": {
+          "save": "Save",
+          "cancel": "Cancel",
+          "update": "Update",
+          "remove": "Remove",
+          "create": "Create"
+        }
+      },
+      "user": {
+        "common": {
+          "title": "Users",
+          "id": "Id",
+          "username": "Username",
+          "email": "Email",
+          "mobileNumber": "Mobile",
+          "fullName": "Contact name",
+          "role": "Role",
+          "status": "Status",
+          "newPassword": "New Password",
+          "newPasswordConfirm": "Confirm New Password",
+          "createUser": "Create User",
+          "createNewUser": "Create New User",
+          "userInfo": "User Info",
+          "generatePassword": "Generate Password",
+          "lastLogin": "Last login"
+        }
+      },
+      "category":{
+        "common": {
+          "title": "Categories",
+          "id": "Id",
+          "name": "Name",
+          "status": "Status",
+          "createCategory": "Create Category",
+          "createNewCategory": "Create New Category",
+          "categoryInfo": "Category Info"
+        }
+      },
+      "post":{
+        "common": {
+          "title": "Posts",
+          "id": "Id",
+          "name": "Title",
+          "categoryId": "Category Id",
+          "description": "Description",
+          "shortDesc": "Short description",
+          "image": "Image",
+          "category": "Category",
+          "status": "Status",
+          "createPost": "Create Post",
+          "createNewPost": "Create New Post",
+          "postInfo": "Post Info"
+        }
+      }
     }
 }
