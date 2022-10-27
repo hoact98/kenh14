@@ -1,0 +1,189 @@
+@import "~swiper/css";
+@import "~swiper/css/pagination";
+@import "~swiper/css/navigation";
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.featured-news .swiper-slide {
+    // text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    width: 250px !important;
+    margin-right: 20px !important;
+    margin-left: 0 !important;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.top-news-wrapper {
+    margin-top: 20px;
+    .top-news-list {
+        .top-news-left,
+        .top-news-right {
+            .top-news-item {
+                a.top-news-thumb {
+                    width: 500px;
+                    height: 315px;
+                    margin-right: 20px;
+                    margin-bottom: 15px;
+                    display: block;
+                }
+                h3.top-news-title {
+                    a {
+                        font-family: SFD-Bold;
+                        font-size: 26px;
+                        line-height: 28px;
+                        margin-bottom: 12px;
+                        width: 95%;
+                        display: block;
+                        color: #333;
+                        text-decoration: none;
+                    }
+                }
+                .top-news-txt {
+                    font-family: Arial;
+                    font-size: 14px;
+                    line-height: 22px;
+                    display: block;
+                    width: 95%;
+                    color: #777;
+                }
+            }
+        }
+        .top-news-right {
+            .top-news-item {
+                a.top-news-thumb {
+                    width: 180px;
+                    height: 113px;
+                    display: block;
+                    margin-bottom: 5px;
+                }
+                h3.top-news-title {
+                    a {
+                        font-size: 15px;
+                        line-height: 19px;
+                    }
+                }
+            }
+        }
+    }
+    .slide-news-wrapper {
+        position: relative;
+        margin-top: 30px;
+        overflow: hidden;
+        width: 720px;
+        &:hover .slide-news-cate .swiper-button-prev {
+            left: 0;
+        }
+        .slide-news-cate {
+            .swiper-button-next {
+                position: absolute;
+                top: 52px;
+                right: 0;
+                width: 35px;
+                height: 95px;
+                z-index: 10;
+                cursor: pointer;
+                background: url(../../../../../assets/images/sprite-k14.20.png) -115px -137px no-repeat;
+                background-color: rgba(251, 108, 39, .9);
+                border-top-left-radius: 3px;
+                -webkit-border-top-left-radius: 3px;
+                -moz-border-radius-topleft: 3px;
+                border-bottom-left-radius: 3px;
+                -webkit-border-bottom-left-radius: 3px;
+                -moz-border-radius-bottomleft: 3px;
+                &.swiper-button-disabled {
+                    background-color: #333 !important;
+                    width: 35px;
+                    opacity: .8;
+                    display: block;
+                    pointer-events: all;
+                }
+                &:hover {
+                    background-color: rgba(251, 108, 39, 1);
+                }
+                &::after {
+                    display: none;
+                }
+            }
+            .swiper-button-prev {
+                position: absolute;
+                top: 52px;
+                left: -35px;
+                width: 35px;
+                height: 95px;
+                z-index: 10;
+                cursor: pointer;
+                background: url(../../../../../assets/images/sprite-k14.20.png) -70px -137px no-repeat;
+                background-color: rgba(251, 108, 39, .9);
+                border-top-right-radius: 3px;
+                -webkit-border-top-right-radius: 3px;
+                -moz-border-radius-topright: 3px;
+                border-bottom-right-radius: 3px;
+                -webkit-border-bottom-right-radius: 3px;
+                -moz-border-radius-bottomright: 3px;
+                &.swiper-button-disabled {
+                    background-color: #333 !important;
+                    width: 35px;
+                    opacity: .8;
+                    display: block;
+                    pointer-events: all;
+                }
+                &:hover {
+                    background-color: rgba(251, 108, 39, 1);
+                }
+                &::after {
+                    display: none;
+                }
+            }
+            .swiper-pagination {
+                margin-top: 15px;
+                bottom: 0;
+                .swiper-pagination-bullet-active {
+                    background: #fb512a !important;
+                }
+            }
+            .slide-item {
+                padding-bottom: 20px;
+                a.slide-item-thumb {
+                    text-decoration: none;
+                }
+                h4.slide-item-title {
+                    a {
+                        text-decoration: none;
+                        font-family: SFD-Bold;
+                        font-weight: normal;
+                        letter-spacing: 0;
+                        font-size: 17px;
+                        line-height: 22px;
+                        color: #2d2d2d;
+                        transition: color .3s;
+                        &:hover {
+                            color: #555;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

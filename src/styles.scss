@@ -39,3 +39,5 @@ body {
     src: url('./assets/fonts/SFD-Medium.eot?');
     src: url('./assets/fonts/SFD-Medium.eot?') format('embedded-opentype'), url('./assets/fonts/SFD-Medium.woff2'), url('./assets/fonts/SFD-Medium.woff') format('woff'), url('./assets/fonts/SFD-Medium.ttf') format('truetype'), url('./assets/fonts/SFD-Medium.svg#SFD-Medium') format('svg')
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

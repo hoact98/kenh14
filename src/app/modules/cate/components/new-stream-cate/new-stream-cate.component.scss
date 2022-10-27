@@ -1,0 +1,89 @@
+.home-star-item {
+    padding: 25px 0;
+    border-bottom: 1px solid #ebebeb;
+    .home-star-right {
+        .home-star-title a {
+            font-family: SFD-Bold;
+            font-size: 20px;
+            line-height: 26px;
+            color: #333;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+            margin-top: -5px;
+        }
+        .home-star-meta {
+            .home-star-category {
+                font-family: SFD-SemiBold;
+                font-size: 14px;
+                color: #41455e;
+                text-decoration: none;
+            }
+            .home-star-time {
+                font-size: 14px;
+                color: #777;
+            }
+        }
+        .home-star-trim {
+            font-size: 13px;
+            font-family: Arial;
+            color: #4d4d4d;
+            line-height: 18px;
+            display: block;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .home-star-readmore {
+            padding-top: 12px;
+            margin-top: 15px;
+            border-top: 1px dotted #d6d6d6;
+            .readmore-label {
+                font-size: 11px;
+                color: #888;
+                display: block;
+                margin-bottom: 8px;
+            }
+            .readmore-list {
+                list-style: none;
+                padding-left: 0;
+                .readmore-item {
+                    margin-bottom: 8px;
+                    position: relative;
+                    &::before {
+                        display: block;
+                        width: 4px;
+                        height: 4px;
+                        content: '';
+                        background-color: #ff5e34;
+                        border-radius: 100%;
+                        float: left;
+                        margin-top: 8px;
+                        margin-right: 9px;
+                    }
+                    a {
+                        font-family: SFD-Bold;
+                        font-size: 14px;
+                        line-height: 20px;
+                        color: #41455e;
+                        display: -webkit-box;
+                        text-decoration: none;
+                        .readmore-time {
+                            font-size: 13px;
+                            color: #888;
+                            font-family: SFD-Medium;
+                            &::before {
+                                content: ' . ';
+                                margin-left: 3px;
+                                margin-right: 3px;
+                                position: relative;
+                                top: -4px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

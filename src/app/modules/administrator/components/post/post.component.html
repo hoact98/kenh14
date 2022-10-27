@@ -1,0 +1,33 @@
+<div class="administrator-main">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>STT</th>
+        <th>{{'administrator.post.common.id' | translate}}</th>
+        <th>{{'administrator.post.common.name' | translate}}</th>
+        <th>{{'administrator.post.common.image' | translate}}</th>
+        <th>{{'administrator.post.common.category' | translate}}</th>
+        <th>
+          <a routerLink="/administrator/posts/create"
+            class="btn btn-sm btn-info">{{'administrator.post.common.createPost' | translate}}</a>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let post of posts; let i = index">
+        <td>#{{i + 1}}</td>
+        <td>{{post.id}}</td>
+        <td>{{post.title}}</td>
+        <td><img [src]="path+'/'+post.image" alt="" width="50"></td>
+        <td>{{post.category.name}}</td>
+        <td>
+          <a routerLink="/administrator/posts/update/{{post.id}}"
+            class="btn btn-warning btn-sm me-2">{{'administrator.common.button.update' | translate}}</a>
+          <a class="btn btn-danger btn-sm" (click)="delete(post.id)">{{'administrator.common.button.remove' |
+            translate}}</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

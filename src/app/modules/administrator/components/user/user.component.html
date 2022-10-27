@@ -1,0 +1,27 @@
+<div class="administrator-main">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>STT</th>
+        <th>{{'administrator.user.common.id' | translate}}</th>
+        <th>{{'administrator.user.common.name' | translate}}</th>
+        <th>{{'administrator.user.common.email' | translate}}</th>
+        <th>
+          <a routerLink="/administrator/users/create" class="btn btn-info btn-sm">{{'administrator.user.common.createUser' | translate}}</a>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users; let i = index">
+        <td>#{{i + 1}}</td>
+        <td>{{user.id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.email}}</td>
+        <td>
+          <a routerLink="/administrator/users/update/{{user.id}}" class="btn btn-warning btn-sm me-2">{{'administrator.common.button.update' | translate}}</a>
+          <button  class="btn btn-danger btn-sm" (click)="delete(user.id)">{{'administrator.common.button.remove' | translate}}</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

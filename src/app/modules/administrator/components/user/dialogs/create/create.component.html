@@ -1,0 +1,65 @@
+<div class="administrator-main">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-4">
+        <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+          <div class="form-group mt-3">
+            <label class="form-label" for="">Tên tài khoản</label>
+            <input type="text" formControlName="name" class="form-control"
+            [ngClass]="{ 'is-invalid': (f.name.dirty || f.name.touched) && (f.name.errors)}">
+          </div>
+          <p *ngIf="f.name.invalid && (f.name.dirty || f.name.touched)" class="mt-2 text-danger">
+
+            <span *ngIf="f.name.errors?.required">
+              Bạn chưa nhập tên
+            </span>
+            <span *ngIf="f.name.errors?.minlength">
+              Ít nhất 4 ký tự
+            </span>
+          </p>
+
+          <div class="form-group mt-3">
+            <label class="form-label" for="">Email</label>
+            <input type="email" formControlName="email" class="form-control"
+            [ngClass]="{ 'is-invalid': (f.email.dirty || f.email.touched) && (f.email.errors)}">
+          </div>
+          <p *ngIf="f.email.invalid && (f.email.dirty || f.email.touched)" class="mt-2 text-danger">
+
+            <span *ngIf="f.email.errors?.required">
+              Bạn chưa nhập email
+            </span>
+            <span *ngIf="f.email.errors?.email">
+              Email không hợp lệ
+            </span>
+          </p>
+          <span *ngIf="errors" class="mt-2 text-danger">
+            {{errors.email}}
+          </span>
+          <div class="form-group mt-3">
+            <label class="form-label" for="">Mật khẩu</label>
+            <input type="password" formControlName="password" class="form-control"
+            [ngClass]="{ 'is-invalid': (f.password.dirty || f.password.touched) && (f.password.errors)}">
+          </div>
+          <p *ngIf="f.password.invalid && (f.password.dirty || f.password.touched)" class="mt-2 text-danger">
+
+            <span *ngIf="f.password.errors?.required">
+              Bạn chưa nhập mật khẩu
+            </span>
+            <span *ngIf="f.password.errors?.minlength">
+              Ít nhất 8 ký tự
+            </span>
+            <span *ngIf="f.password.errors?.pattern">
+              Mật khẩu chứa ít nhất 1 chữ thường, 1 chữ in hoa, 1 ký tự số và 1 ký tự đặc biệt
+            </span>
+          </p>
+          <div class="mt-3">
+            <button [disabled]="userForm.invalid" type="submit" class="btn btn-primary">
+              <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+              <span>Save</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

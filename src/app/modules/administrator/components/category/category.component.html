@@ -1,0 +1,26 @@
+<div class="administrator-main">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>STT</th>
+        <th>{{'administrator.category.common.id' | translate}}</th>
+        <th>{{'administrator.category.common.name' | translate}}</th>
+        <th>
+          <a routerLink="/administrator/categories/create" class="btn btn-sm btn-info">{{'administrator.category.common.createCategory' | translate}}</a>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let category of categories; let i = index">
+        <td>#{{i+1}}</td>
+        <td>{{category.id}}</td>
+        <td>{{category.name}}</td>
+        <td>
+          <a routerLink="/administrator/categories/update/{{category.id}}"
+          class="btn btn-warning btn-sm me-2">{{'administrator.common.button.update' | translate}}</a>
+          <a class="btn btn-danger btn-sm" (click)="delete(category.id)">{{'administrator.common.button.remove' | translate}}</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,107 @@
+{
+    "demo": {
+        "title": "Translation demo",
+        "text": "This is a simple demonstration app for ngx-translate",
+        "greeting": "Hello {{name}}!",
+        "paragraph": "Try <strong>BabelEdit</strong>! This translation editor is made for <strong>ngx-translate</strong>!"
+    },
+    "common": {
+      "language": {
+        "en": "English",
+        "vi": "Vietnamese"
+      }
+    },
+    "auth": {
+      "common":{
+        "username": "Username",
+        "fullName": "Full name",
+        "remember": "Remember login?",
+        "forgetPassword": "Forgot password",
+        "login": "Login",
+        "register": "Register",
+        "credentials": "Your credential",
+        "email": "Email",
+        "password": "Password",
+        "passwordConfirm": "Confirm password",
+        "notRegister": "Don't have an account?",
+        "registered": "You have an account!",
+        "signUp": "Sign up",
+        "policyWarning": "By continuing, you're confirming that you've read our Terms & Conditions and Cookie Policy",
+        "signOut": "Logout",
+        "accountSettings": "Account settings",
+        "invalidCredential": "Login failed! Wrong email or password!",
+        "adduser": "Add user",
+        "listusers": "List users",
+        "edituser": "Edit information",
+        "updateuser": "Update information",
+        "fullNameRequired": "Fullname is not required",
+        "usernameRequired": "Username is not required",
+        "emailRequired": "Email is not required",
+        "emailNotType": "It's not Email",
+        "passwordRequired": "Password is not required",
+        "passwordMinLength": "Password have min length is 8",
+        "passwordRegex": "Password requires 1 lowercase character, 1 uppercase character, 1 number and 1 special character ",
+        "passwordConfirmRequired": "Confirm Password is not required",
+        "passwordConfirmNotMatch": "Confirm Password not match Password",
+        "lastLogin": "Last Login"
+      }
+    },
+    "administrator": {
+      "common": {
+        "title": "Administrator",
+        "button": {
+          "save": "Save",
+          "cancel": "Cancel",
+          "update": "Update",
+          "remove": "Remove",
+          "create": "Create"
+        }
+      },
+      "user": {
+        "common": {
+          "title": "Users",
+          "id": "Id",
+          "username": "Username",
+          "email": "Email",
+          "mobileNumber": "Mobile",
+          "fullName": "Contact name",
+          "role": "Role",
+          "status": "Status",
+          "newPassword": "New Password",
+          "newPasswordConfirm": "Confirm New Password",
+          "createUser": "Create User",
+          "createNewUser": "Create New User",
+          "userInfo": "User Info",
+          "generatePassword": "Generate Password",
+          "lastLogin": "Last login"
+        }
+      },
+      "category":{
+        "common": {
+          "title": "Categories",
+          "id": "Id",
+          "name": "Name",
+          "status": "Status",
+          "createCategory": "Create Category",
+          "createNewCategory": "Create New Category",
+          "categoryInfo": "Category Info"
+        }
+      },
+      "post":{
+        "common": {
+          "title": "Posts",
+          "id": "Id",
+          "name": "Title",
+          "categoryId": "Category Id",
+          "description": "Description",
+          "shortDesc": "Short description",
+          "image": "Image",
+          "category": "Category",
+          "status": "Status",
+          "createPost": "Create Post",
+          "createNewPost": "Create New Post",
+          "postInfo": "Post Info"
+        }
+      }
+    }
+}

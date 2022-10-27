@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { SwiperComponent } from "swiper/angular";
 import SwiperCore, { Keyboard, Pagination, Navigation } from "swiper";
 import { environment } from 'src/environments/environment';
@@ -12,9 +13,12 @@ SwiperCore.use([Keyboard, Pagination, Navigation]);
 })
 export class NewStreamComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
   data: any;
   ngOnInit(): void {
+    this.route.params.subscribe(params => {
+      // this.title = params['slug'];
+    });
     this.data = environment.data;
   }
 

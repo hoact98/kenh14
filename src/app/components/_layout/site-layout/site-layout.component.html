@@ -5,13 +5,25 @@
 <div class="body-wrapper">
     <div class="content">
         <div class="wrapper">
-            <div class="row">
-                <div class="col-9">
-                    <router-outlet></router-outlet>
-                </div>
-                <div class="col-3">
-                    <app-site-sidebar></app-site-sidebar>
-                </div>
+            <div class="mb-2 mt-2">
+                <button class="btn btn-primary ms-2 ps-2" (click)="useLanguage('en')">English</button>
+                <button class="btn btn-info ms-2 ps-2" (click)="useLanguage('vi')">Vietnam</button>
+            </div>
+            <div class="mb-3">
+                <h1>{{ 'demo.title' | translate }}</h1>
+
+                <!-- translation: translation pipe -->
+                <p>{{ 'demo.text' | translate }}</p>
+
+                <!-- translation: directive (key as attribute)-->
+                <!-- <p [translate]="'demo.text'"></p> -->
+                <!-- <p [translate]="'demo.greeting'" [translateParams]="{name: 'Andreas'}"></p> -->
+
+                <!-- translation: directive (key as content of element) -->
+                <!-- <p translate>demo.text</p> -->
+                <p translate [translateParams]="{name: 'Andreas'}">demo.greeting</p>
+
+                <div [innerHTML]="'demo.paragraph' | translate"></div>
             </div>
         </div>
     </div>
