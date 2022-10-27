@@ -12,6 +12,7 @@ import { environment } from 'src/environments/environment';
 export class PostContentComponent implements OnInit {
 
   constructor(private titleService:Title, private route: ActivatedRoute) { }
+
     id:any;
     slug: any;
     title: any;
@@ -21,12 +22,14 @@ export class PostContentComponent implements OnInit {
     ngOnInit(): void {
     this.voice = false;
     this.route.params.subscribe(params => {
+
       this.slug = params['slug'];
       // let regex = /\d+/g;
       let regex = /(\/[a-zA-Z0-9_\-.]+)*?\d+.chn{1}$/ig;
       let matches = params['slug'].match(regex).toString();
       // alert(matches)
       this.id = matches.replace('.chn', '')
+
       // console.log(this.id);
       // console.log(matches);
       let post = environment.data.filter(element => element.id == this.id);
@@ -37,6 +40,7 @@ export class PostContentComponent implements OnInit {
       }else{
 
       }
+
 
     });
   }
